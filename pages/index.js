@@ -1,9 +1,14 @@
 import React from 'react'
+import { Navbar, About, Menu, Footer, Contact } from '../components'
 
 const Home = () => {
   return (
-    <div className='font-poppins text-3xl flex justify-center items-center'>
-      Home
+    <div className="flex flex-col justify-center items-center">
+      <Navbar />
+      <About />
+      <Menu />
+      <Contact />
+      <Footer />
     </div>
   )
 }
