@@ -1,16 +1,20 @@
-import React from 'react'
-import { Navbar, About, Menu, Footer, Contact } from '../components'
+import React from "react";
+import { Navbar, About, Menu, Footer, Contact, Events, Gallery } from "../components";
+import { ThemeProvider } from "next-themes";
 
 const Home = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <Navbar />
-      <About />
-      <Menu />
-      <Contact />
-      <Footer />
-    </div>
-  )
-}
+    <ThemeProvider>
+      <div className="flex flex-col justify-center items-center">
+        <Navbar />
+        <About />
+        <Events />
+        <Menu />
+        <Contact />
+        <Footer />
+      </div>
+    </ThemeProvider>
+  );
+};
 
-export default Home
+export default Home;
