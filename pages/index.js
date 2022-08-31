@@ -4,16 +4,14 @@ import { ThemeProvider } from "next-themes";
 
 const Home = () => {
   return (
-    <ThemeProvider>
-      <div className="flex flex-col justify-center items-center">
+      <div className="font-poppins">
         <Navbar />
-        <About />
+        {/* <About />
         <Events />
         <Menu />
         <Contact />
-        <Footer />
+        <Footer /> */}
       </div>
-    </ThemeProvider>
   );
 };
 
