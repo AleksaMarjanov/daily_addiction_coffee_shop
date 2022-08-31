@@ -10,21 +10,21 @@ const Navbar = () => {
 
   return (
     <nav
-      className="w-full flex justify-between items-center 
-      fixed backdrop-sepia-0 z-[2] pt-4 pr-8 sm:pr-0 border border-b-slate-300 border-transparent"
+      className="w-full flex justify-between items-center pt-4 pr-8
+      fixed z-[2] backdrop-sepia-0 sm:pr-0 border border-b-slate-300 border-transparent bg-gray-100"
     >
       <div className="flex items-center justify-start mb-3">
         <Image
           src={logo}
           alt="logo"
-          width={70}
-          height={70}
-          className="rounded-full"
+          width={120}
+          height={40}
+          className="rounded-xl"
           objectFit="cover"
         />
-        <a href="tel:701-651-4989" className="font-poppins ml-5 text-sm">📞(701)-651-4989</a>
+        <a href="tel:701-651-4989" className="font-poppins ml-5 text-sm xs:text-xs">📞(701)-651-4989</a>
       </div>
-      <ul className="flex-1 flex items-center justify-center list-none sm:hidden">
+      <ul className="flex-1 flex items-center justify-center list-none sm:hidden md:hidden">
         {["home", "about", "events", "menu", "gallery", "contact"].map(
           (item) => (
             <li
@@ -34,7 +34,7 @@ const Navbar = () => {
               <div className="w-[5px] h-[5px] rounded-full mb-[5px] bg-transparent hover:bg-gray-400" />
               <a
                 href={`#${item}`}
-                className="text-gray-500 flex flex-col uppercase font-normal transition-all ease-in-out duration-300 hover:text-secondary-color"
+                className="text-gray-500 flex flex-col uppercase font-normal transition-all ease-in-out duration-500 hover:text-secondary-color"
               >
                 {item}
               </a>
@@ -67,7 +67,7 @@ const Navbar = () => {
                     <a
                       href={`#${item}`}
                       className="text-gray-500 no-underline text-2xl
-                    uppercase font-poppins font-semibold transition-all ease-in-out duration-300 hover:text-secondary-color"
+                    uppercase font-poppins font-semibold transition-all ease-in-out duration-500 hover:text-secondary-color"
                       onClick={() => setToggle(false)}
                     >
                       {item}
