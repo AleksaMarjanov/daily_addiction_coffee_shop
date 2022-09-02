@@ -16,9 +16,9 @@ const Navbar = () => {
         <Image
           src={logo}
           alt="logo"
-          width={120}
-          height={40}
-          className="rounded-xl"
+          width={70}
+          height={70}
+          className="rounded-full"
           objectFit="cover"
         />
         <a
