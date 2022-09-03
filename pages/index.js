@@ -1,13 +1,13 @@
 import React from "react";
-import { Navbar, Footer } from "../src/components";
-import { ThemeProvider } from "next-themes";
-import { About, Contact, Events, Menu, Header } from "../src/container";
+import { Navbar } from "../src/components";
+import { About, Contact, Events, Menu, Header, Footer, Banner } from "../src/container";
 
 const Home = () => {
   return (
       <div className="font-poppins">
         <Navbar />
-        <Header />
+        <Banner />
+        {/* <Header /> */}
         <About />
         <Events />
         <Menu />

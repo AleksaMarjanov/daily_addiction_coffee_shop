@@ -1,6 +1,6 @@
 import React from 'react'
-import AppWrap from '../../wrapper/AppWrap'
-import MotionWrap from '../../wrapper/MotionWrap'
+import AppWrap from '../wrapper/AppWrap'
+import MotionWrap from '../wrapper/MotionWrap'
 
 const Menu = () => {
   return (
