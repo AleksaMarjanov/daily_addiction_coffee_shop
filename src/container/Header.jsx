@@ -4,7 +4,7 @@ import MotionWrap from '../../wrapper/MotionWrap'
 
 const Header = () => {
   return (
-    <div className='mt-32'>Header</div>
+    <div id="home" className='mt-32'>Header</div>
   )
 }
 

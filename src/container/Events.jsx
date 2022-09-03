@@ -4,7 +4,7 @@ import MotionWrap from '../../wrapper/MotionWrap'
 
 const Events = () => {
   return (
-    <div>Events</div>
+    <div id="events">Events</div>
   )
 }
 

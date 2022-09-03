@@ -4,7 +4,7 @@ import MotionWrap from '../../wrapper/MotionWrap'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div id="contact">Contact</div>
   )
 }
 

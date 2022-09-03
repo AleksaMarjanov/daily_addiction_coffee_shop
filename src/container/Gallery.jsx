@@ -4,7 +4,7 @@ import MotionWrap from '../../wrapper/MotionWrap'
 
 const Gallery = () => {
   return (
-    <div>Gallery</div>
+    <div id="gallery">Gallery</div>
   )
 }
 

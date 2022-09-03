@@ -13,14 +13,16 @@ const Navbar = () => {
       fixed z-[2] backdrop-blur-sm sm:pr-0 border border-b-slate-300 border-transparent bg-gray-100"
     >
       <div className="flex items-center justify-start mb-3">
-        <Image
-          src={logo}
-          alt="logo"
-          width={70}
-          height={70}
-          className="rounded-full"
-          objectFit="cover"
-        />
+        <a href="/">
+          <Image
+            src={logo}
+            alt="logo"
+            width={70}
+            height={70}
+            className="rounded-full"
+            objectFit="cover"
+          />
+        </a>
         <a
           href="tel:701-651-4989"
           className="font-poppins ml-5 text-sm xs:hidden sm:hidden"
@@ -66,6 +68,7 @@ const Navbar = () => {
             />
             <ul className="list-none p-0 m-0 h-full w-full flex items-start justify-start flex-col">
               <div>
+              <a href='/'>
                 <Image
                   src={logo}
                   alt="logo"
@@ -74,6 +77,7 @@ const Navbar = () => {
                   className="rounded-xl"
                   objectFit="cover"
                 />
+              </a>
                 {["home", "about", "events", "menu", "gallery", "contact"].map(
                   (item) => (
                     <li key={item} className="m-4">
