@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav
       className="w-full flex justify-between items-center pt-4 pr-8
-      fixed z-[2] backdrop-blur-sm sm:pr-0 border border-b-slate-300 border-transparent bg-gray-100"
+      fixed z-[2] backdrop-blur-sm sm:pr-0 border border-b-slate-300 border-transparent bg-coffee-transparent "
     >
       <div className="flex items-center justify-start mb-3">
         <a href="/">
@@ -103,3 +103,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+ 
