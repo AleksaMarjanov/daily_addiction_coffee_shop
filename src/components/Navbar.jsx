@@ -14,6 +14,7 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-start mb-3">
         <a href="/">
+          {/* <p className="font-poppins text-xl ml-3">Daily Addiction</p> */}
           <Image
             src={logo}
             alt="logo"
