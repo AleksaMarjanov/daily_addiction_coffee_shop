@@ -6,11 +6,18 @@ import logo from "../assets/logo.jpg";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [navbar, setNavbar] = useState(false)
+
+  const changeBackground = () => {
+    console.log(window.scrollY)
+  }
+
+  window.addEventListener('scroll', changeBackground)
 
   return (
     <nav
-      className="w-full flex justify-between items-center pt-4 pr-8
-      fixed z-[2] backdrop-blur-sm sm:pr-0 border border-b-slate-300 border-transparent bg-coffee-transparent "
+      className={` w-full flex justify-between items-center pt-4 pr-8
+      fixed z-[2] backdrop-blur-sm sm:pr-0 border border-b-slate-300 border-transparent bg-coffee-transparent`}
     >
       <div className="flex items-center justify-start mb-3">
         <a href="/">
