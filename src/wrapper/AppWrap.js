@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const AppWrap = (Component, idName) => 
 function HOC() {
     return (

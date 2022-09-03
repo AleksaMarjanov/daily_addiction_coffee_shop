@@ -32,7 +32,7 @@ const Navbar = () => {
         </a>
       </div>
       <ul className="flex-1 flex items-center justify-center list-none md:hidden">
-        {["home", "about", "events", "menu", "gallery", "contact"].map(
+        {["home", "about", "events", "menu", "locations", "contact"].map(
           (item) => (
             <li
               className="mt-0 mr-4 cursor-pointer flex items-center justify-center font-poppins "
@@ -40,7 +40,7 @@ const Navbar = () => {
             >
               <div className="w-[5px] h-[5px] rounded-full mb-[5px] bg-transparent hover:bg-gray-400" />
               <a
-                href={`#${item}`}
+                href={`${item}`}
                 className="text-gray-500 flex flex-col uppercase font-normal transition-all ease-in-out duration-500 hover:text-secondary-color"
               >
                 {item}
@@ -79,7 +79,7 @@ const Navbar = () => {
                   objectFit="cover"
                 />
               </a>
-                {["home", "about", "events", "menu", "gallery", "contact"].map(
+                {["home", "about", "events", "menu", "locations", "contact"].map(
                   (item) => (
                     <li key={item} className="m-4">
                       <a
