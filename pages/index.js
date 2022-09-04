@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
   return (
-      <div className="font-poppins text-3xl flex flex-col justify-start items-start">
+      <div id="home" className="font-poppins text-3xl flex flex-col justify-start items-start">
         <p>
           This is a home pageee
         </p> 

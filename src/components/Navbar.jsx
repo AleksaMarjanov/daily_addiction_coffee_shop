@@ -39,7 +39,7 @@ const Navbar = () => {
         </a>
         <a
           href="tel:701-651-4989"
-          className="font-poppins ml-5 text-sm xs:hidden sm:hidden"
+          className={`${navbar ? 'text-white' : 'text-gray-800'} font-poppins ml-5 text-sm xs:hidden sm:hidden`}
         >
           📞(701)-651-4989
         </a>
