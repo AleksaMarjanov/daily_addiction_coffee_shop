@@ -44,17 +44,18 @@ const Navbar = () => {
           📞(701)-651-4989
         </a>
       </div>
-      <ul className="flex-1 flex items-center justify-center list-none  md:hidden">
-        {["home", "about", "events", "menu", "locations", "contact"].map(
+      <ul className="flex-1 flex items-center justify-center list-none md:hidden">
+        {["about", "events", "menu", "location", "contact"].map(
           (item) => (
             <li
-              className="mt-0 mr-4 cursor-pointer flex flex-col items-center justify-center font-poppins list-none"
+            // children:hover:bg-secondary-color
+              className="mt-0 mr-4 cursor-pointer flex flex-col items-center justify-center group duration-300 ease-in-out  font-poppins list-none"
               key={`link-${item}`}
             >
-              <div className="w-[15px] h-[15px] rounded-full mb-[5px] hover:bg-secondary-color bg-transparent" />
+              <div className="w-[5px] h-[5px] rounded-full mb-[5px] group-hover:bg-secondary-color animate-bounce bg-transparent" />
               <a
                 href={`${item}`}
-                className={`${navbar ? 'text-white' : 'text-gray-800'} flex flex-col uppercase no-underline font-normal transition-all ease-in-out duration-500 hover:text-secondary-color`}
+                className={`${navbar ? 'text-white' : 'text-gray-800'} flex flex-col uppercase no-underline font-normal transition-all ease-in-out duration-100 group-hover:text-secondary-color`}
               >
                 {item}
               </a>
@@ -92,7 +93,7 @@ const Navbar = () => {
                   objectFit="cover"
                 />
               </a>
-                {["home", "about", "events", "menu", "locations", "contact"].map(
+                {["about", "events", "menu", "locations", "contact"].map(
                   (item) => (
                     <li key={item} className="m-4">
                       <a
