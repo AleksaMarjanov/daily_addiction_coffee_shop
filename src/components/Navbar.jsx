@@ -18,8 +18,6 @@ const Navbar = () => {
 
   window.addEventListener('scroll', changeBackground)
 
-  const backgroundAndTextOnScroll = 'coffee-gradient text-white'
-
   return (
     <nav
       className={` w-full flex justify-between items-center pt-4 pr-8
