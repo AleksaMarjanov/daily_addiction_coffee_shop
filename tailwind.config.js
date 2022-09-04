@@ -81,11 +81,12 @@ module.exports = {
     screens: {
       xl: { max: '2300px'},
       lg: { max: '1800px' },
+      minlg: {max: '1600px'},
+      minmd: {max: '1300px '},
       md: { max: '990px' },
       sm: { max: '600px' },
       xs: { max: '400px' },
       // minmd: '1700px',
-      minlg: '2100px',
     },
     fontFamily: {
       poppins: ['Poppins', 'sans-serif'],
