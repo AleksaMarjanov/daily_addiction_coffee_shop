@@ -21,7 +21,7 @@ module.exports = {
         'coffee-black-4': '#24252D',
         'coffee-red-violet': '#DA18A3',
         'coffee-red-violet-darker': '#DA1855',
-        'transparent': 'rgba(255,255,255,0.18)',
+        'coffee-transparent-0': 'rgba(255,255,255,0.18)',
         'coffee-transparent': 'rgba(255, 255, 255, 0.25)',
         'file-active': '#2196f3',
         'file-accept': '#00e676',

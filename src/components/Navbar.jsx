@@ -9,15 +9,21 @@ const Navbar = () => {
   const [navbar, setNavbar] = useState(false)
 
   const changeBackground = () => {
-    console.log(window.scrollY)
+    if(window.scrollY >= 80) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
   }
 
   window.addEventListener('scroll', changeBackground)
 
+  const backgroundAndTextOnScroll = 'coffee-gradient text-white'
+
   return (
     <nav
       className={` w-full flex justify-between items-center pt-4 pr-8
-      fixed z-[2] backdrop-blur-sm sm:pr-0 border border-b-slate-300 border-transparent bg-coffee-transparent`}
+      fixed z-[2] backdrop-blur-sm sm:pr-0 border border-b-slate-300 border-transparent ${navbar ? 'coffee-gradient' : 'bg-transparent-0'}`}
     >
       <div className="flex items-center justify-start mb-3">
         <a href="/">
@@ -38,17 +44,17 @@ const Navbar = () => {
           📞(701)-651-4989
         </a>
       </div>
-      <ul className="flex-1 flex items-center justify-center list-none md:hidden">
+      <ul className="flex-1 flex items-center justify-center list-none  md:hidden">
         {["home", "about", "events", "menu", "locations", "contact"].map(
           (item) => (
             <li
-              className="mt-0 mr-4 cursor-pointer flex items-center justify-center font-poppins "
+              className="mt-0 mr-4 cursor-pointer flex flex-col items-center justify-center font-poppins list-none"
               key={`link-${item}`}
             >
-              <div className="w-[5px] h-[5px] rounded-full mb-[5px] bg-transparent hover:bg-gray-400" />
+              <div className="w-[15px] h-[15px] rounded-full mb-[5px] hover:bg-secondary-color bg-transparent" />
               <a
                 href={`${item}`}
-                className="text-gray-500 flex flex-col uppercase font-normal transition-all ease-in-out duration-500 hover:text-secondary-color"
+                className={`${navbar ? 'text-white' : 'text-gray-800'} flex flex-col uppercase no-underline font-normal transition-all ease-in-out duration-500 hover:text-secondary-color`}
               >
                 {item}
               </a>
@@ -90,7 +96,7 @@ const Navbar = () => {
                   (item) => (
                     <li key={item} className="m-4">
                       <a
-                        href={`#${item}`}
+                        href={`${item}`}
                         className="text-gray-500 no-underline md:text-2xl xs:text-lg
                     uppercase font-poppins font-semibold transition-all ease-in-out duration-500 hover:text-secondary-color"
                         onClick={() => setToggle(false)}
