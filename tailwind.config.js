@@ -35,7 +35,20 @@ module.exports = {
         'brown-color': '#46364a',
         'white-color': '#ffffff',
       },
-      textShadow: {
+      keyframes: {
+        extend: {
+            '0%': { width: 0 },
+        },
+        extend2: {
+            '0%': { width: '0%' },
+            '100%': { width: '100%' },
+        },
+    },
+    animation: {
+        'extend': 'extend 2s ease-in-out 1s 1 forwards',
+        'extend2': 'extend2 1s ease-in-out 1s 1 backwards',
+    },
+        textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',
         DEFAULT: '0 2px 4px var(--tw-shadow-color)',
         lg: '0 8px 16px var(--tw-shadow-color)',

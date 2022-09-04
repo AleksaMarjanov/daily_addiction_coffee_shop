@@ -49,13 +49,13 @@ const Navbar = () => {
           (item) => (
             <li
             // children:hover:bg-secondary-color
-              className="mt-0 mr-4 cursor-pointer flex flex-col items-center justify-center group duration-300 ease-in-out  font-poppins list-none"
+              className="mt-0 mr-4 cursor-pointer flex flex-col items-center justify-center group font-poppins list-none"
               key={`link-${item}`}
             >
               <div className="w-[5px] h-[5px] rounded-full mb-[5px] group-hover:bg-secondary-color animate-bounce bg-transparent" />
               <a
                 href={`${item}`}
-                className={`${navbar ? 'text-white' : 'text-gray-800'} flex flex-col uppercase no-underline font-normal transition-all ease-in-out duration-100 group-hover:text-secondary-color`}
+                className={`${navbar ? 'text-white' : 'text-gray-800'} flex flex-col uppercase no-underline font-normal transition-all ease-in-out duration-300 group-hover:text-secondary-color`}
               >
                 {item}
               </a>
