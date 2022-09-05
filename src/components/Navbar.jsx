@@ -43,7 +43,7 @@ const Navbar = () => {
         </a>
       </div>
       <ul className="flex-1 flex items-center justify-center list-none md:hidden">
-        {["about", "events", "menu", "location", "contact"].map(
+        {["home","about", "events", "menu", "location", "contact"].map(
           (item) => (
             <li
               className="mt-0 mr-4 cursor-pointer flex flex-col items-center justify-center group font-poppins list-none"
@@ -90,7 +90,7 @@ const Navbar = () => {
                   objectFit="cover"
                 />
               </a>
-                {["about", "events", "menu", "location", "contact"].map(
+                {["home","about", "events", "menu", "location", "contact"].map(
                   (item) => (
                     <li key={item} className="m-4">
                       <a

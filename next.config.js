@@ -12,7 +12,16 @@ const nextConfig = {
     projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
     sanity_token: process.env.REACT_APP_SANITY_TOKEN,
 
-  }
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/home',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
