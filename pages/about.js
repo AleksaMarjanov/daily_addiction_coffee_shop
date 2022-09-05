@@ -5,8 +5,8 @@ import MotionWrap from '../src/wrapper/MotionWrap'
 const About = () => {
   return (
     <div id="about" className='flex flex-col font-poppins '>
-      <div className='animate-extend2 overflow-x-hidden no-scrollbar whitespace-nowrap duration-700 text-6xl font-semibold'>About</div>
-      <span className=''>We're not just about coffee</span>
+      <div className='animate-extend2 overflow-x-hidden no-scrollbar whitespace-nowrap duration-700 text-6xl md:text-4xl font-semibold'>About</div>
+      <span className='items-center justify-center'>We're not just about coffee</span>
     </div>
   )
 }

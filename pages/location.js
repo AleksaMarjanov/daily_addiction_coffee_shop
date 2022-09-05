@@ -1,9 +1,12 @@
 import React from 'react'
+import AppWrap from '../src/wrapper/AppWrap'
+import MotionWrap from '../src/wrapper/MotionWrap'
+
 
 const Location = () => {
   return (
-    <div>locations</div>
+    <div id="location">locations</div>
   )
 }
 
-export default Location
+export default AppWrap(MotionWrap(Location, "location"))

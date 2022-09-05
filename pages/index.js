@@ -1,4 +1,7 @@
 import React from "react";
+import AppWrap from '../src/wrapper/AppWrap'
+import MotionWrap from '../src/wrapper/MotionWrap'
+
 
 const Home = () => {
   return (
@@ -12,4 +15,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default AppWrap(MotionWrap(Home,"home"));

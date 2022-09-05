@@ -73,31 +73,31 @@ const Navbar = () => {
           <motion.div
             whileInView={{ x: [300, 0] }}
             transition={{ duration: 0.85, ease: "easeOut" }}
-            className="fixed top-0 bottom-0 right-0 z-5 p-4 xs:w-full w-[80%]
+            className="fixed top-0 bottom-0 right-0 z-5 p-4 xs:w-full sm:w-[80%] xl:w-[40%]
              min-h-screen flex flex-col items-end justify-end bg-white bg-cover bg-repeat shadow-xl"
           >
             <HiX
               onClick={() => setToggle(false)}
               className="w-[35px] h-[35px] text-secondary-color "
             />
-            <ul className="list-none p-0 m-0 h-full w-full flex items-start justify-start flex-col">
+            <ul className="list-none p-0 m-0 h-full w-full flex items-center justify-start flex-col">
               <div>
               <a href='/'>
                 <Image
                   src={logo}
                   alt="logo"
-                  width={120}
-                  height={40}
+                  width={240}
+                  height={120}
                   className="rounded-xl"
                   objectFit="cover"
                 />
               </a>
-                {["about", "events", "menu", "locations", "contact"].map(
+                {["about", "events", "menu", "location", "contact"].map(
                   (item) => (
                     <li key={item} className="m-4">
                       <a
                         href={`${item}`}
-                        className="text-gray-500 no-underline md:text-2xl xs:text-lg
+                        className="text-gray-500 no-underline xl:text-2xl sm:text-xl
                     uppercase font-poppins font-semibold transition-all ease-in-out duration-500 hover:text-secondary-color"
                         onClick={() => setToggle(false)}
                       >
