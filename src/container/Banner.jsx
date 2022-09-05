@@ -8,7 +8,7 @@ import MotionWrap from "../wrapper/MotionWrap";
 const Banner = () => {
   return (
     <>
-      <div className="relative xs:mt-[6.3rem] sm:mt-[6.25rem] minsm:mt-[6rem] minmd:mt-[5.4rem] md:mt-[5.85rem] lg:mt-[5.3rem] xl:mt-[5.4rem] z-0 w-full flex items-center overflow-hidden justify-center">
+      <div className="relative xs:mt-[6.3rem] sm:mt-[6.2rem] minsm:mt-[6rem] minmd:mt-[5.4rem] md:mt-[5.85rem] lg:mt-[5.3rem] xl:mt-[5.4rem] z-0 w-full flex items-center overflow-hidden justify-center">
         <p className="font-poppins text-4xl sm:text-sm sm:mb-3 
         shadow-xl absolute left-96 md:left-4 md:text-2xl minmd:left-16 minlg:left-39 lg:left-64 z-20 text-white flex items-start justify-start">
           Daily Addiction<br/>

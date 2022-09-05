@@ -35,7 +35,6 @@ const Navbar = () => {
             objectFit="cover"
           />
         </a>
-        <p className="font-poppins text-xl ml-3 md:hidden xl:block">Daily Addiction</p>
         <a
           href="tel:701-651-4989"
           className={`${navbar ? 'text-white' : 'text-gray-800'} font-poppins ml-5 text-sm xs:hidden sm:hidden`}
@@ -47,11 +46,10 @@ const Navbar = () => {
         {["about", "events", "menu", "location", "contact"].map(
           (item) => (
             <li
-            // children:hover:bg-secondary-color
               className="mt-0 mr-4 cursor-pointer flex flex-col items-center justify-center group font-poppins list-none"
               key={`link-${item}`}
             >
-              <div className="md:w-[5px] md:h-[5px] xl:w-[10px] xl:h-[10px] rounded-full mb-[5px] group-hover:bg-secondary-color animate-bounce bg-transparent" />
+              <div className="md:w-[5px] md:h-[5px] xl:w-[7px] xl:h-[7px] rounded-full mb-[5px] group-hover:bg-secondary-color animate-bounce bg-transparent" />
               <a
                 href={`${item}`}
                 className={`${navbar ? 'text-white' : 'text-gray-800'} flex flex-col uppercase no-underline font-normal transition-all ease-in-out duration-300 group-hover:text-secondary-color`}
