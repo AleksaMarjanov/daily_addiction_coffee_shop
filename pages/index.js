@@ -1,7 +1,7 @@
 import React from "react";
 import AppWrap from '../src/wrapper/AppWrap'
 import MotionWrap from '../src/wrapper/MotionWrap'
-import Image from 'next/link'
+import Image from "next/image";
 import { images } from '../src/constants'
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
           height={400}
           alt="hero"
         />
-        <span>This is a spann</span>/
+        <span>This is a spann</span>
         <h2>Specificly brewed coffee to your taste</h2>
       </div>
   );
