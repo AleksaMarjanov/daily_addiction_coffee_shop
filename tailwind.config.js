@@ -46,7 +46,7 @@ module.exports = {
     },
     animation: {
         'extend': 'extend 2s ease-in-out 1s 1 forwards',
-        'extend2': 'extend2 1s ease-in-out 1s 1 backwards',
+        'extend2': 'extend2 1s ease-in-out 1s 1 forwards',
     },
         textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',

@@ -26,7 +26,7 @@ const Banner = () => {
           <motion.button
             className="box absolute text-md py-4 px-8 font-poppins font-semibold text-white text-xs sm:pt-2 sm:mb-5 rounded-full 
             md:bottom-5 md:text-sm lg:bottom-10 sm:bottom-0 
-            coffee-gradient sm:text-xs sm:py-2 sm:px-2 minlg:text-lg xl:mt-56 xl:text-xl
+            button-gradient sm:text-xs sm:py-2 sm:px-2 minlg:text-lg xl:mt-56 xl:text-xl
              minlg:px-8 sm:mt-5 "
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
