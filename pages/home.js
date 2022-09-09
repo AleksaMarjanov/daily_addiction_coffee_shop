@@ -3,6 +3,8 @@ import AppWrap from "../src/wrapper/AppWrap";
 import MotionWrap from "../src/wrapper/MotionWrap";
 import Image from "next/image";
 import { images } from "../src/constants";
+import { AnimateSharedLayout, motion, AnimatePresence} from "framer-motion";
+
 
 import { client, urlFor } from "../src/client";
 
