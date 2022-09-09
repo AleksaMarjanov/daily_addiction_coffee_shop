@@ -20,6 +20,8 @@ module.exports = {
         'coffee-black-3': '#2A2D3A',
         'coffee-black-4': '#24252D',
         'coffee-red-violet': '#DA18A3',
+        'coffee-blue': '#115173',
+        'coffee-yellow': '#ffd700',
         'coffee-red-violet-darker': '#DA1855',
         'coffee-transparent-0': 'rgba(255,255,255,0.18)',
         'coffee-transparent': 'rgba(255, 255, 255, 0.25)',
