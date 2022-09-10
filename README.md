@@ -1,3 +1,11 @@
+# Website for Daily Addiction Coffee House
+## Functionality: 
+### - Searching through events on events page and filter searched query
+### - Abillity to order coffee online through DoorDash/Toastnb
+### - Static pages 
+### - Map with react-leaflet
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
