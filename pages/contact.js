@@ -14,12 +14,12 @@ const Contact = () => {
       <h2 className="text-4xl md:font-2xl sm:font-xl font-semibold">Contact Us</h2>
       <div className="w-full mt-5">
         <form onSubmit={handleSubmit}>
-          <ul className="p-0 m-0 list-none mb-3 overflow-hidden block clear-both relative animate ease-in duration-500 transition-all">
-            <li className="w-[100%] float-left clear-none">
+          <ul className="p-0 m-0 list-none mb-5 overflow-hidden block clear-both relative animate ease-in duration-500 transition-all">
+            <li className="w-[100%] float-left clear-none mb-2">
               <input className="w-full border-0 bg-coffee-blue h-[50px] text-xl
                    text-white pt-0 pr-2 box-border"  placeholder="Full Name" type="text" name="name" required />
             </li>
-            <li className="w-[100%] float-left clear-none">
+            <li className="w-[100%] float-left mb-2 clear-none">
               <input
                 className="w-full border-0 bg-coffee-blue h-[50px] text-xl
                    text-white pt-0 pr-2 box-border"
@@ -31,7 +31,7 @@ const Contact = () => {
             </li>
             <li>
               <input
-                className="w-full border-0 bg-coffee-blue h-[50px] text-xl
+                className="w-full border-0 mb-2 bg-coffee-blue h-[50px] text-xl
                    text-white pt-0 pr-2 box-border"
                 placeholder="Subject"
                 type="text"
