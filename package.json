@@ -14,6 +14,7 @@
   "dependencies": {
     "@bradgarropy/next-seo": "^1.2.0",
     "@chakra-ui/react": "^2.2.8",
+    "@emailjs/browser": "^3.7.0",
     "@next/bundle-analyzer": "^12.2.5",
     "@sanity/client": "^3.3.0",
     "@sanity/image-url": "^1.0.1",
@@ -22,6 +23,7 @@
     "deck.gl": "^8.8.9",
     "dotenv": "^16.0.1",
     "emailjs": "^4.0.1",
+    "emailjs-com": "^3.2.0",
     "eslint-plugin-react-hooks": "^4.7.0-next-19e9a4c68-20220818",
     "framer-motion": "^7.2.0",
     "geolib": "^3.3.3",
@@ -37,6 +39,7 @@
     "react-leaflet": "^4.0.1",
     "react-map-gl": "^7.0.19",
     "react-map-gl-geocoder": "^1.8.1",
+    "react-recaptcha": "^2.3.10",
     "sass": "^1.54.5",
     "tailwindcss-children": "^2.1.0"
   },
