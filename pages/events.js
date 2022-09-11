@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { client, urlFor } from "../src/client";
 import Image from "next/image";
 import Link from "next/link";
+import { SearchBar } from "../src/container";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -21,7 +22,7 @@ const Events = () => {
   return (
     <div className="font-poppins">
       <div className="">
-        <p>Search...</p>
+        <SearchBar />
       </div>
       <div className="p-4 gap-8 sm:p-2 sm:gap-4 grid grid-flow-col grid-rows-4 sm:flex sm:flex-col md:flex md:flex-col sm:items-center sm:justify-center">
         {events.map((event, index) => (
