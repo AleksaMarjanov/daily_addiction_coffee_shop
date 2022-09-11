@@ -4,33 +4,77 @@ import MotionWrap from "../src/wrapper/MotionWrap";
 import { motion } from "framer-motion";
 
 import { client, urlFor } from "../src/client";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import { SearchBar } from "../src/container";
+
+const SearchBar = dynamic(() => import("../src/container/SearchBar"), {
+  ssr: false,
+});
 
 const Events = () => {
   const [events, setEvents] = useState([]);
-  const [activeSelect, setActiveSelect] = useState(false)
+  const [activeSelect, setActiveSelect] = useState(false);
 
-  useEffect(() => {
+  const fetchEvents = () => {
     const query = '*[_type == "events" ]';
 
     client.fetch(query).then((data) => {
       setEvents(data);
     });
+  }
+
+  useEffect(() => {
+      fetchEvents();
   }, []);
 
-  const handleSearch = () => {
+  const onHandleSearch = (value) => {
+    const filteredEvents = events.filter(({ name }) =>
+      name.toLowerCase().includes(value.toLowerCase())
+    );
 
-  }
+    if (filteredEvents.length) {
+      setEvents(filteredEvents);
+    } else {
+      {<p>NO RESULTS!</p>}
+    }
+  };
 
-  const clearSearch = () => {
-  }
+  const onClearSearch = () => {
+    if (events.length) {
+      fetchEvents()
+    }
+  };
+
+  useEffect(() => {
+    const sortedEvents = [...events];
+
+    switch (activeSelect) {
+      case 'Oldest to newest':
+        setEvents(sortedEvents.sort((a, b) => a.price - b.price));
+        break;
+      case 'Newest to oldest':
+        setEvents(sortedEvents.sort((a, b) => b.price - a.price));
+        break;
+      case 'Recently added':
+        setEvents(sortedEvents.sort((a, b) => b.tokenId - a.tokenId));
+        break;
+      default:
+        setEvents(events);
+        break;
+    }
+  }, [activeSelect]);
 
   return (
     <div className="font-poppins">
-      <div className="">
-        <SearchBar />
+      <div className="flex-2 sm:w-full flex flex-row sm:flex-col">
+        <SearchBar
+          activeSelect={activeSelect}
+          setActiveSelect={setActiveSelect}
+          handleSearch={onHandleSearch}
+          clearSearch={onClearSearch}
+
+        />
       </div>
       <div className="p-4 gap-8 sm:p-2 sm:gap-4 grid grid-flow-col grid-rows-4 sm:flex sm:flex-col md:flex md:flex-col sm:items-center sm:justify-center">
         {events.map((event, index) => (
@@ -39,7 +83,13 @@ const Events = () => {
             className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
           >
             <a href="#">
-              <Image src={`${urlFor(event.imgurl)}`} alt={event.name} width={300} height={300} objectFit="cover" />
+              <Image
+                src={`${urlFor(event.imgurl)}`}
+                alt={event.name}
+                width={400}
+                height={400}
+                objectFit="cover"
+              />
             </a>
             <div className="p-5">
               <a href="#">

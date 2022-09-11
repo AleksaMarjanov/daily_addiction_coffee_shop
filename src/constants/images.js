@@ -16,8 +16,12 @@ import people from '../assets/people.jpg'
 import shake from '../assets/shake.jpg'
 import vanillachai from '../assets/vanillachai.jpg'
 import zingers from '../assets/zingers.jpg'
+import search from '../assets/Search.svg'
+import arrow from '../assets/arrow.svg'
 
 export default {
+    search,
+    arrow,
     logo,
     hero,
     ambient,
