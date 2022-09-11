@@ -10,6 +10,7 @@ import { SearchBar } from "../src/container";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
+  const [activeSelect, setActiveSelect] = useState(false)
 
   useEffect(() => {
     const query = '*[_type == "events" ]';
@@ -18,6 +19,13 @@ const Events = () => {
       setEvents(data);
     });
   }, []);
+
+  const handleSearch = () => {
+
+  }
+
+  const clearSearch = () => {
+  }
 
   return (
     <div className="font-poppins">
