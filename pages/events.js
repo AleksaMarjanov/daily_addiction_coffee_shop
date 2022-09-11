@@ -7,6 +7,7 @@ import { client, urlFor } from "../src/client";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
+import isWindows from "cross-env/src/is-windows";
 
 const SearchBar = dynamic(() => import("../src/container/SearchBar"), {
   ssr: false,
@@ -14,6 +15,7 @@ const SearchBar = dynamic(() => import("../src/container/SearchBar"), {
 
 const Events = () => {
   const [events, setEvents] = useState([]);
+  const [eventsCopy, setEventsCopy] = useState([]);
   const [activeSelect, setActiveSelect] = useState(false);
 
   const fetchEvents = () => {
@@ -22,10 +24,10 @@ const Events = () => {
     client.fetch(query).then((data) => {
       setEvents(data);
     });
-  }
+  };
 
   useEffect(() => {
-      fetchEvents();
+    fetchEvents();
   }, []);
 
   const onHandleSearch = (value) => {
@@ -36,12 +38,14 @@ const Events = () => {
     if (filteredEvents.length) {
       setEvents(filteredEvents);
     } else {
-      {<p>NO RESULTS!</p>}
+      setEvents(eventsCopy);
     }
   };
 
   const onClearSearch = () => {
-    if (events.length) {
+    if (events.length && eventsCopy.length) {
+      setEvents(eventsCopy);
+    } else {
       fetchEvents()
     }
   };
@@ -50,13 +54,13 @@ const Events = () => {
     const sortedEvents = [...events];
 
     switch (activeSelect) {
-      case 'Oldest to newest':
+      case "Oldest to newest":
         setEvents(sortedEvents.sort((a, b) => a.price - b.price));
         break;
-      case 'Newest to oldest':
+      case "Newest to oldest":
         setEvents(sortedEvents.sort((a, b) => b.price - a.price));
         break;
-      case 'Recently added':
+      case "Recently added":
         setEvents(sortedEvents.sort((a, b) => b.tokenId - a.tokenId));
         break;
       default:
@@ -67,14 +71,18 @@ const Events = () => {
 
   return (
     <div className="font-poppins">
-      <div className="flex-2 sm:w-full flex flex-row sm:flex-col">
-        <SearchBar
-          activeSelect={activeSelect}
-          setActiveSelect={setActiveSelect}
-          handleSearch={onHandleSearch}
-          clearSearch={onClearSearch}
-
-        />
+      <div className="flexBetween mx-4 xs:mx-0 minlg:mx-8 sm:flex-col sm:items-start">
+        <h1 className="flex-1 font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold sm:mb-4">
+          Events
+        </h1>
+        <div className="flex-2 sm:w-full flex flex-row sm:flex-col">
+          <SearchBar
+            activeSelect={activeSelect}
+            setActiveSelect={setActiveSelect}
+            handleSearch={onHandleSearch}
+            clearSearch={onClearSearch}
+          />
+        </div>
       </div>
       <div className="p-4 gap-8 sm:p-2 sm:gap-4 grid grid-flow-col grid-rows-4 sm:flex sm:flex-col md:flex md:flex-col sm:items-center sm:justify-center">
         {events.map((event, index) => (
