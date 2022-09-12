@@ -83,7 +83,7 @@ const Events = () => {
       </div>
       <div class="bg-blue-100">
   <section class="max-w-7xl px-8 py-10">
-    <h1 class="text-4xl font-extrabold text-center text-gray-900">Latest events</h1>
+    <h1 class="text-4xl font-extrabold text-center text-gray-900">Latest Events</h1>
     <div class="my-10 grid gap-6 lg:grid-cols-3">
       {events.map((event,index) => (
       <div key={event.name + index}>
