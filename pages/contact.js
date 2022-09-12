@@ -22,7 +22,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    if (recaptchaLoad && isVerified) {
+    // if (recaptchaLoad && isVerified) {
       emailjs
         .sendForm(
           process.env.emailJs_service,
@@ -39,9 +39,9 @@ const Contact = () => {
             alert("Failed to send the message, please try again");
           }
         );
-    } else {
-      alert('Please check reCaptcha and try again.')
-    }
+    // } else { 
+    //   alert('Please check reCaptcha and try again.')
+    // }
   };
 
   return (
@@ -98,12 +98,12 @@ const Contact = () => {
               />
             </li>
           </ul>
-          <Recaptcha
+          {/* <Recaptcha
               sitekey={process.env.recaptcha}
               render="explicit"
               onloadCallback={recaptchaLoaded}
               verifyCallback={verifiedRecaptcha}
-            />
+            /> */}
         </form>
       </div>
     </div>

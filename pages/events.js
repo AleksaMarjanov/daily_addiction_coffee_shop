@@ -72,9 +72,6 @@ const Events = () => {
   return (
     <div className="font-poppins">
       <div className="flexBetween mx-4 xs:mx-0 minlg:mx-8 sm:flex-col sm:items-start">
-        <h1 className="flex-1 font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold sm:mb-4">
-          Events
-        </h1>
         <div className="flex-2 sm:w-full flex flex-row sm:flex-col">
           <SearchBar
             activeSelect={activeSelect}
@@ -84,11 +81,11 @@ const Events = () => {
           />
         </div>
       </div>
-      <div className="p-4 gap-8 sm:p-2 sm:gap-4 grid grid-flow-col grid-rows-4 sm:flex sm:flex-col md:flex md:flex-col sm:items-center sm:justify-center">
+      <div className="p-4 gap-8 sm:p-2 sm:gap-4 grid grid-flow-col grid-rows-1 sm:flex sm:flex-col items-center justify-center">
         {events.map((event, index) => (
           <div
             key={event.name + index}
-            className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+            className="max-w-sm mt-5 bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 shadow-xl" 
           >
             <a href="#">
               <Image
