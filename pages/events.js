@@ -46,7 +46,7 @@ const Events = () => {
     if (events.length && eventsCopy.length) {
       setEvents(eventsCopy);
     } else {
-      fetchEvents()
+      fetchEvents();
     }
   };
 
@@ -70,7 +70,7 @@ const Events = () => {
   }, [activeSelect]);
 
   return (
-    <div className="font-poppins">
+    <div className="font-poppins bg-blue-100">
       <div className="flexBetween mx-4 xs:mx-0 minlg:mx-8 sm:flex-col sm:items-start">
         <div className="flex-2 sm:w-full flex flex-row sm:flex-col">
           <SearchBar
@@ -81,53 +81,33 @@ const Events = () => {
           />
         </div>
       </div>
-      <div className="p-4 gap-8 sm:p-2 sm:gap-4 grid grid-flow-col grid-rows-1 sm:flex sm:flex-col items-center justify-center">
-        {events.map((event, index) => (
-          <div
-            key={event.name + index}
-            className="max-w-sm mt-5 bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 shadow-xl" 
-          >
-            <a href="#">
-              <Image
-                src={`${urlFor(event.imgurl)}`}
-                alt={event.name}
-                width={400}
-                height={400}
-                objectFit="cover"
-              />
-            </a>
-            <div className="p-5">
-              <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  {event.name}
-                </h5>
-              </a>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                {event.description}
-              </p>
-              <a
-                href="#"
-                className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-coffee-blue rounded-lg hover:bg-secondary-color focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                Read more
-                <svg
-                  aria-hidden="true"
-                  className="ml-2 -mr-1 w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </a>
-            </div>
+      <div class="bg-blue-100">
+  <section class="max-w-7xl px-8 py-10">
+    <h1 class="text-4xl font-extrabold text-center text-gray-900">Latest events</h1>
+    <div class="my-10 grid gap-6 lg:grid-cols-3">
+      {events.map((event,index) => (
+      <div key={event.name + index}>
+        <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+          <Image
+          src={`${urlFor(event.imgurl)}`}
+          width={400}
+          height={400}
+          objectFit="cover"
+          className="w-full h-56 object-cover object-center"
+          />
+          <div class="p-6">
+            <h2 class="text-2xl font-bold line-clamp-1 text-gray-900">{event.name}</h2>
+            <p class="mt-3 text-gray-700 line-clamp-3">{event.description}</p>
+            <a class="mt-4 inline-block px-4 py-1.5 bg-blue-300 rounded text-blue-900 font-semibold tracking-wide hover:bg-blue-800 hover:text-blue-100" href="#">Read more</a>
           </div>
-        ))}
+        </div>
       </div>
+      ))}
+      </div>
+  </section>
+ 
+</div>
+      
     </div>
   );
 };

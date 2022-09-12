@@ -19,6 +19,7 @@
     "@sanity/client": "^3.3.0",
     "@sanity/image-url": "^1.0.1",
     "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "cross-env": "^7.0.3",
     "deck.gl": "^8.8.9",
     "dotenv": "^16.0.1",
