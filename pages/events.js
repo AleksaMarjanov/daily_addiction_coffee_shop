@@ -70,7 +70,7 @@ const Events = () => {
   }, [activeSelect]);
 
   return (
-    <div className="font-poppins bg-blue-100">
+    <div className="font-poppins">
       <div className="flexBetween mx-4 xs:mx-0 minlg:mx-8 sm:flex-col sm:items-start">
         <div className="flex-2 sm:w-full flex flex-row sm:flex-col">
           <SearchBar
@@ -81,7 +81,7 @@ const Events = () => {
           />
         </div>
       </div>
-      <div class="bg-blue-100">
+      <div >
   <section class="max-w-7xl px-8 py-10">
     <h1 class="text-4xl font-extrabold text-center text-gray-900">Latest Events</h1>
     <div class="my-10 grid gap-6 lg:grid-cols-3">
