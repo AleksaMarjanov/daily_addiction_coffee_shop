@@ -36,8 +36,6 @@ const Menu = () => {
   };
 
 
-  }
-
   return (
     <div id="menu" className='font-poppins'>
       <div className='text-2xl font-semibold uppercase'>
