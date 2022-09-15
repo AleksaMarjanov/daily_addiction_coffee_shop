@@ -5,22 +5,22 @@ import {client, urlFor} from "../src/client";
 import { motion } from "framer-motion";
 import Image from 'next/image'
 
-const Menu = () => {
-  const [menu, setMenu] = useState([]);
+const menus = () => {
+  const [menus, setMenus] = useState([]);
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [activeFilter, setActiveFilter] = useState("All");
-  const [filterMenu, setFilterMenu] = useState([]);
+  const [filtermenus, setFiltermenus] = useState([]);
 
   useEffect(() => {
     const query = '*[_type == "menu"]';
 
     client.fetch(query).then((data) => {
-      setMenu(data);
-      setFilterMenu(data);
+      setMenus(data);
+      setFiltermenus(data);
     });
   }, []);
 
-  const handleMenuFilter = (item) => {
+  const handlemenusFilter = (item) => {
     setActiveFilter(item);
     setAnimateCard([{ y: 100, opacity: 0 }]);
 
@@ -28,9 +28,9 @@ const Menu = () => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
       if (item === "All") {
-        setMenu(menu);
+        setMenus(menus);
       } else {
-        setMenu(menu.filter((menuItem) => menuItem.tags.includes(item)));
+        setMenus(menus.filter((menu) => menu.tags.includes(item)));
       }
     }, 500);
   };
@@ -43,7 +43,7 @@ const Menu = () => {
         {["Breakfast", "Deserts", "Drinks", "All"].map((item, index) => (
           <div
             key={index}
-            onClick={() => handleMenuFilter(item)}
+            onClick={() => handlemenusFilter(item)}
             className={`pt-[0.5px] pr-4 bg-white rounded-lg text-black font-semibold cursor-pointer transition-all animate ease-in duration-300 hover:bg-coffee-blue hover:text-white flex justify-center items-center p-text ${
               activeFilter === item ? `${itemActive}` : ""
             }`}
@@ -58,7 +58,7 @@ const Menu = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="flex flex-wrap justify-center items-center"
       >
-        {filterMenu.map((menu, index) => (
+        {filtermenus.map((menu, index) => (
           <div
             className="w-270 flex-col m-8 p-4 rounded-lg bg-white text-black cursor-pointer transition-all animate duration-300 hover:shadow-xl flex justify-center items-center"
             key={menu.name + index}
@@ -96,4 +96,4 @@ const Menu = () => {
   );
 };
 
-export default AppWrap(MotionWrap(Menu, "menu"));
+export default AppWrap(MotionWrap(menus, "menus"));

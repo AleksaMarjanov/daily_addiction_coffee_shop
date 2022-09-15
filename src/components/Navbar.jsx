@@ -1,4 +1,4 @@
-import { HiMenuAlt4, HiX } from "react-icons/hi";
+import { HimenusAlt4, HiX } from "react-icons/hi";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -43,7 +43,7 @@ const Navbar = () => {
         </a>
       </div>
       <ul className="flex-1 flex items-center justify-center list-none md:hidden">
-        {["home","about", "events", "menu", "location", "contact"].map(
+        {["home","about", "events", "menus", "location", "contact"].map(
           (item) => (
             <li
               className="mt-0 mr-4 cursor-pointer flex flex-col items-center justify-center group font-poppins list-none"
@@ -62,7 +62,7 @@ const Navbar = () => {
       </ul>
 
       <div className="w-[35px] h-[35px] flex rounded-full relative items-center justify-center xl:hidden md:block mt-2 mr-4 xl:">
-        <HiMenuAlt4
+        <HimenusAlt4
           onClick={() => setToggle(true)}
           className="w-[35px] h-[35px] text-secondary-color"
         />
@@ -90,7 +90,7 @@ const Navbar = () => {
                   objectFit="cover"
                 />
               </a>
-                {["home","about", "events", "menu", "location", "contact"].map(
+                {["home","about", "events", "menus", "location", "contact"].map(
                   (item) => (
                     <li key={item} className="m-4">
                       <a
