@@ -39,12 +39,12 @@ const Menu = () => {
 
   return (
     <div className="flex-1 w-full flex-col">
-      <div className="flex flex-row justify-start items-center flex-wrap mt-32 mr-0 mb-16">
+      <div className="flex flex-row justify-center items-center flex-wrap mt-32 mr-0 mb-16">
         {["Breakfast", "Deserts", "Drinks", "All"].map((item, index) => (
           <div
             key={index}
             onClick={() => handleMenuFilter(item)}
-            className={`pt-[0.5px] pr-4 bg-white text-black font-semibold cursor-pointer transition-all animate ease-in duration-300 hover:bg-coffee-blue hover:text-white flex justify-center items-center p-text ${
+            className={`pt-[0.5px] pr-4 bg-white rounded-lg text-black font-semibold cursor-pointer transition-all animate ease-in duration-300 hover:bg-coffee-blue hover:text-white flex justify-center items-center p-text ${
               activeFilter === item ? `${itemActive}` : ""
             }`}
           >
@@ -65,7 +65,7 @@ const Menu = () => {
           >
             <div className="w-full h-230 relative flex justify-center items-center">
               <Image
-                src={`${urlFor(menu.imgurl)}`}
+                src={`${urlFor(menu.imgUrl)}`}
                 alt={menu.name}
                 objectFit="cover"
                 className="w-full h-full rounded-lg object-cover"

@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head></Head>
-      <div>
+      <div className="">
         <Navbar />
         <Banner />
         <Component {...pageProps} />
