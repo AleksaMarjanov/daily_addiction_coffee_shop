@@ -78,17 +78,7 @@ const menus = () => {
                 width={300}
                 height={300}
                 priority
-              />
-{/* 
-              <motion.div
-                whileHover={{ opacity: [0, 1] }}
-                transition={{
-                  duration: 0.25,
-                  ease: "easeInOut",
-                  staggerChildren: 0.5,
-                }}
-                className="app__work-hover flex justify-center items-center"
-              ></motion.div> */}
+              /> 
             </div>
 
             <div className="p-2 w-full relative flex flex-col items-center justify-center">

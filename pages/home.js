@@ -3,6 +3,7 @@ import AppWrap from "../src/wrapper/AppWrap";
 import MotionWrap from "../src/wrapper/MotionWrap";
 import Image from "next/image";
 import { images } from "../src/constants";
+import SEO from '@bradgarropy/next-seo'
 
 import { client, urlFor } from "../src/client";
 import Link from "next/link";
@@ -19,6 +20,14 @@ const Home = () => {
   }, []);
 
   return (
+    <>
+    <Head>
+        <SEO 
+        title="Daily Addiction Coffe House" 
+        description="Enjoy the best coffee in Williston" 
+        keywords={['best coffe shop in williston', 'coffee', 'breakfast', 'espresso', 'latte', 'cappuccino']}
+        />
+    </Head>
     <div
       id="home"
       className="w-full font-poppins text-3xl flex flex-row justify-center items-center"
@@ -72,6 +81,9 @@ const Home = () => {
       ))}
       </div> */}
     </div>
+
+    </>
+    
   );
 };
 

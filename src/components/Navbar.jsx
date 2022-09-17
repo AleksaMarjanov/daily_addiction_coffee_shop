@@ -45,7 +45,7 @@ const Navbar = () => {
       <ul className="flex-1 flex items-center justify-center list-none md:hidden">
         {["home","about", "events", "menu", "location", "contact"].map(
           (item) => (
-            <li
+            <li 
               className="mt-0 mr-4 cursor-pointer flex flex-col items-center justify-center group font-poppins list-none"
               key={`link-${item}`}
             >
