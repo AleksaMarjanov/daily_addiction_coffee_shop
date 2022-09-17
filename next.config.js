@@ -7,6 +7,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['cdn.sanity.io'],
+    domains: ['images.unsplash.com']
   },
   env: {
     projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
