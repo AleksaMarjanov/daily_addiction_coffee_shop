@@ -5,6 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+        .contactInput {
+        @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#0086bb]/40 focus:text-[#0086bb]/40 hover:border-[#0086bb]/40
+    }
+}
+
 .button-gradient {
    background: linear-gradient(101.12deg, #005070 27.35%, #0086bb 99.99%, #00a6e7 100%, #44c9e0 100%);
 }

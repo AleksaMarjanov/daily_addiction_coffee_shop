@@ -84,7 +84,7 @@ const Events = () => {
       <div >
   <section class="max-w-7xl px-8 py-10">
     <h1 class="text-4xl font-extrabold text-center text-gray-900">Latest Events</h1>
-    <div class="my-10 grid gap-6 lg:grid-cols-3">
+    <div class="my-10 grid gap-6 lg:grid-cols-3 md:flex-col md:flex">
       {events.map((event,index) => (
       <div key={event.name + index}>
         <div class="bg-white rounded-xl shadow-2xl overflow-hidden">

@@ -13,7 +13,7 @@ const Footer = () => {
       className="rounded-full"
       alt="logo"
       />
-      <p className="pb-0 font-poppins font-semibold text-lg sm:text-xs sm:mt-5">
+      {/* <p className="pb-0 font-poppins font-semibold text-lg sm:text-xs sm:mt-5">
         307 Main St<br />
         Williston 58801<br />
         701-651-4989<br/>
@@ -22,7 +22,7 @@ const Footer = () => {
         HOURS:<br />
         Mon-Sun 7AM-7PM<br/>
 
-      </p>
+      </p> */}
 </div>
           <div className="flex flexBetween sm:text-xs sm:mt-3">
           <p className="font-poppins xs:font-sm">{new Date().getFullYear()}  @Aleksa All Rights Reserved</p>

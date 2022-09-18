@@ -4,6 +4,7 @@ import MotionWrap from "../src/wrapper/MotionWrap";
 import Image from "next/image";
 import { images } from "../src/constants";
 import SEO from '@bradgarropy/next-seo'
+import Head from 'next/head'
 
 import { client, urlFor } from "../src/client";
 import Link from "next/link";
