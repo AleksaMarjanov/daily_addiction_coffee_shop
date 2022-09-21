@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import AppWrap from "../src/wrapper/AppWrap";
 import MotionWrap from "../src/wrapper/MotionWrap";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
 
 const Contact = () => {
@@ -34,10 +35,22 @@ const Contact = () => {
 
   return (
     <div className="font-poppins flex flex-col justify-center items-center">
+      <motion.div
+      inital={{
+        x: -500,
+        opacity: 0,
+      }}
+      animate={{
+        x: 0,
+        opacity: 1,
+      }}
+      transition={{ duration: 2.5 }}
+      >
       <h2 className="text-4xl md:font-2xl sm:font-xl font-semibold">
         Contact
       </h2>
-      <div className='flex flex-col space-y-10 mt-3'>
+      </motion.div>
+      <div className='flex flex-col space-y-10 mt-10 md:mt-5'>
         <h4 className='text-4xl font-semibold text-center'>Come and Visit Us. <span className='underline decoration-[#0086bb]/50'>Have Coffee.</span> 
         </h4>
 
