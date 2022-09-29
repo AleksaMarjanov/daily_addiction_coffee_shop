@@ -26,7 +26,7 @@ const SearchBar = ({ activeSelect, setActiveSelect, handleSearch, clearSearch })
 
   return (
     <>
-      <div className="flexCenter bg-white border border-coffee-gray-2 py-3 px-4 sm:py-1 sm:px-2  rounded-md">
+      <div className="flex-1 flexCenter bg-white border sm:ml-10 sm:mr-10 lg:ml-24 lg:mr-24 border-coffee-gray-2 py-3 px-4 sm:py-1 sm:px-2  rounded-md">
         {images.search && (
         <Image
           src={images.search}
