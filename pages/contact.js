@@ -57,19 +57,19 @@ const Contact = () => {
         <div className='space-y-10'>
             <div className='flex items-center space-x-5 justify-center'>
             <PhoneIcon className='text-[#0086bb] h-7 w-7 animate-pulse'/>
-            <p className='text-2xl'>+701-651-4989</p>
+            <p className='text-2xl sm:text-lg'>+701-651-4989</p>
             </div>
-            <div className='flex items-center space-x-5 justify-center'>
+            <div className='flex items-center space-x-5 sm:space-x-0 justify-center'>
             <EnvelopeIcon className='text-[#0086bb] h-7 w-7 animate-pulse'/>
-            <p className='text-2xl'>dailyaddictionch@gmail.com</p>
+            <p className='text-2xl sm:text-lg'>dailyaddictionch@gmail.com</p>
             </div>
-            <div className='flex items-center space-x-5 justify-center'>
+            <div className='flex items-center space-x-5 sm:space-x-0 justify-center'>
             <MapPinIcon className='text-[#0086bb] h-7 w-7 animate-pulse'/>
-            <p className='text-2xl'>307 Main St, Williston, ND</p>
+            <p className='text-2xl sm:text-lg'>307 Main St, Williston, ND</p>
             </div>
             {!isFormSubmitted ? (
 
-            <form className='flex flex-col space-y-2 w-fit mx-auto border-2' onSubmit={() => sendEmail()} ref={form}>
+            <form className='flex flex-col space-y-2 mx-auto border-2' onSubmit={() => sendEmail()} ref={form}>
                 <div className='flex space-x-2'>
                   <input  type="text" className='contactInput' placeholder='Name' required/>
                   <input  type="email" className='contactInput' placeholder='Email'required/>
@@ -79,7 +79,7 @@ const Contact = () => {
 
                 <textarea  placeholder="Message" name="" className='contactInput' required/>
                 <button type="submit" className='cursor-pointer bg-[#0086bb] 
-                py-5 px-10 sm:py-2 sm:px-5 sm:w-[70%] rounded-md text-white font-bold text-lg'>Submit</button>
+                py-5 px-10 sm:py-2 sm:px-5 rounded-md text-white font-bold text-lg'>Submit</button>
             </form>
             ): (
               <div className="flex flex-col items-center justify-center">
