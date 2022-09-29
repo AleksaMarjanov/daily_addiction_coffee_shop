@@ -46,12 +46,12 @@ const Contact = () => {
       }}
       transition={{ duration: 2.5 }}
       >
-      <h2 className="text-4xl md:font-2xl sm:font-xl font-semibold">
+      <h2 className="text-4xl md:text-2xl sm:text-xl font-semibold">
         Contact
       </h2>
       </motion.div>
-      <div className='flex flex-col space-y-10 mt-10 md:mt-5'>
-        <h4 className='text-4xl font-semibold text-center'>Come and Visit Us. <span className='underline decoration-[#0086bb]/50'>Have Coffee.</span> 
+      <div className='flex flex-col justify-center items-center space-y-10 mt-10 md:mt-5'>
+        <h4 className='text-4xl md:text-2xl sm:text-xl font-semibold text-center'>Come and Visit Us. <span className='underline decoration-[#0086bb]/50'>Have Coffee.</span> 
         </h4>
 
         <div className='space-y-10'>
@@ -69,7 +69,7 @@ const Contact = () => {
             </div>
             {!isFormSubmitted ? (
 
-            <form className='flex flex-col space-y-2 w-fit mx-auto' onSubmit={() => sendEmail()} ref={form}>
+            <form className='flex flex-col space-y-2 w-fit mx-auto border-2' onSubmit={() => sendEmail()} ref={form}>
                 <div className='flex space-x-2'>
                   <input  type="text" className='contactInput' placeholder='Name' required/>
                   <input  type="email" className='contactInput' placeholder='Email'required/>
@@ -78,7 +78,8 @@ const Contact = () => {
                 <input  placeholder="Subject" type="text" className='contactInput' required/>
 
                 <textarea  placeholder="Message" name="" className='contactInput' required/>
-                <button type="submit" className='cursor-pointer bg-[#0086bb] py-5 px-10 rounded-md text-white font-bold text-lg'>Submit</button>
+                <button type="submit" className='cursor-pointer bg-[#0086bb] 
+                py-5 px-10 sm:py-2 sm:px-5 sm:w-[70%] rounded-md text-white font-bold text-lg'>Submit</button>
             </form>
             ): (
               <div className="flex flex-col items-center justify-center">
