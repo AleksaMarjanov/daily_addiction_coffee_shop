@@ -6,57 +6,99 @@ import logo from "../assets/logo.jpg";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  const [navbar, setNavbar] = useState(false)
+  const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
-    if(window.scrollY >= 80) {
-      setNavbar(true)
+    if (window.scrollY >= 80) {
+      setNavbar(true);
     } else {
-      setNavbar(false)
+      setNavbar(false);
     }
-  }
+  };
 
-  window.addEventListener('scroll', changeBackground)
+  window.addEventListener("scroll", changeBackground);
 
   return (
     <nav
       className={` w-full flex justify-between items-center pt-4 pr-8
-      fixed z-[2] backdrop-blur-sm sm:pr-0 border border-b-slate-300 border-transparent ${navbar ? 'coffee-gradient' : 'bg-transparent-0'}`}
+      fixed z-[2] backdrop-blur-sm sm:pr-0 border border-b-slate-300 border-transparent ${
+        navbar ? "button-gradient" : "bg-transparent-0"
+      }`}
     >
       <div className="flex items-center justify-start mb-3">
         <a href="/">
-          
-          <Image
-            src={logo}
-            alt="logo"
-            width={70}
-            height={70}
-            className="rounded-full"
-            objectFit="cover"
-          />
+          <motion.div
+            initial={{
+              x: -500,
+              opacity: 0,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{ duration: 1.2 }}
+          >
+            <Image
+              src={logo}
+              alt="logo"
+              width={70}
+              height={70}
+              className="rounded-full"
+              objectFit="cover"
+            />
+          </motion.div>
         </a>
+        <motion.div
+         initial={{
+           x: -500,
+           opacity: 0,
+         }}
+         animate={{
+           x: 0,
+           opacity: 1,
+         }}
+         transition={{ duration: 1.2 }}
+       >
         <a
           href="tel:701-651-4989"
-          className={`${navbar ? 'text-white' : 'text-gray-800'} font-poppins ml-5 text-sm xs:hidden sm:hidden`}
+          className={`${
+            navbar ? "text-white" : "text-gray-800"
+          } font-poppins ml-5 text-sm xs:hidden sm:hidden`}
         >
           📞(701)-651-4989
         </a>
+        </motion.div>
       </div>
       <ul className="flex-1 flex items-center justify-center list-none md:hidden">
-        {["home","about", "events", "menu", "location", "contact"].map(
-          (item) => (
-            <li 
-              className="mt-0 mr-4 cursor-pointer flex flex-col items-center justify-center group font-poppins list-none"
-              key={`link-${item}`}
+        {["home", "about", "events", "menu", "location", "contact"].map(
+          (item, index) => (
+            <motion.div
+            key={index}
+              initial={{
+                x: 500,
+                opacity: 0,
+              }}
+              animate={{
+                x: 0,
+                opacity: 1,
+              }}
+              transition={{ duration: 1.2 }}
             >
-              <div className="md:w-[5px] md:h-[5px] xl:w-[7px] xl:h-[7px] rounded-full mb-[5px] group-hover:bg-secondary-color animate-bounce bg-transparent" />
-              <a
-                href={`${item}`}
-                className={`${navbar ? 'text-white' : 'text-gray-800'} flex flex-col uppercase no-underline font-normal transition-all ease-in-out duration-300 group-hover:text-secondary-color`}
+              <li
+                className="mt-0 mr-4 cursor-pointer flex flex-col items-center justify-center group font-poppins list-none"
+                key={`link-${item}`}
               >
-                {item}
-              </a>
-            </li>
+                <div className="md:w-[5px] md:h-[5px] xl:w-[7px] xl:h-[7px] rounded-full mb-[5px] group-hover:bg-secondary-color animate-bounce bg-transparent" />
+                <a
+                  href={`${item}`}
+                  className={`${
+                    navbar ? "text-white" : "text-gray-800"
+                  } flex flex-col uppercase no-underline font-normal transition-all ease-in-out duration-300 group-hover:text-secondary-color`}
+                >
+                  {item}
+                </a>
+              </li>
+            </motion.div>
           )
         )}
       </ul>
@@ -80,17 +122,17 @@ const Navbar = () => {
             />
             <ul className="list-none p-0 m-0 h-full w-full flex items-center justify-start flex-col">
               <div>
-              <a href='/'>
-                <Image
-                  src={logo}
-                  alt="logo"
-                  width={240}
-                  height={120}
-                  className="rounded-xl"
-                  objectFit="cover"
-                />
-              </a>
-                {["home","about", "events", "menu", "location", "contact"].map(
+                <a href="/">
+                  <Image
+                    src={logo}
+                    alt="logo"
+                    width={240}
+                    height={120}
+                    className="rounded-xl"
+                    objectFit="cover"
+                  />
+                </a>
+                {["home", "about", "events", "menu", "location", "contact"].map(
                   (item) => (
                     <li key={item} className="m-4">
                       <a
@@ -114,4 +156,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
- 

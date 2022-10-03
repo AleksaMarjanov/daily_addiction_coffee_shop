@@ -2,109 +2,125 @@ import React, { useState, useRef } from "react";
 import AppWrap from "../src/wrapper/AppWrap";
 import MotionWrap from "../src/wrapper/MotionWrap";
 import emailjs from "@emailjs/browser";
-import Recaptcha from "react-recaptcha";
+import { motion } from "framer-motion";
+import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
 const Contact = () => {
-  const [recaptchaLoad, setRecaptchaLoad] = useState(false);
-  const [isVerified, setIsVerified] = useState(false);
   const { form } = useRef();
-
-  const recaptchaLoaded = () => {
-    setRecaptchaLoad(true);
-  };
-
-  const verifiedRecaptcha = (response) => {
-    if (response) {
-      setIsVerified(true);
-    }
-  };
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     // if (recaptchaLoad && isVerified) {
-      emailjs
-        .sendForm(
-          process.env.emailJs_service,
-          process.env.emailJs_tempalte,
-          e.target,
-          process.env.emailJs_API
-        )
-        .then(
-          () => {
-            alert("Message successfully sent!");
-            window.location.reload(false);
-          },
-          () => {
-            alert("Failed to send the message, please try again");
-          }
-        );
-    // } else { 
-    //   alert('Please check reCaptcha and try again.')
+    emailjs
+      .sendForm(
+        process.env.emailJs_service,
+        process.env.emailJs_tempalte,
+        e.target,
+        process.env.emailJs_API
+      )
+      .then(
+        () => {
+          alert("Message successfully sent!");
+          setIsFormSubmitted(true);
+          window.location.reload(false);
+        },
+        () => {
+          alert("Failed to send the message, please try again");
+        }
+      );
     // }
   };
 
   return (
     <div className="font-poppins flex flex-col justify-center items-center">
-      <h2 className="text-4xl md:font-2xl sm:font-xl font-semibold">
-        Contact Us
-      </h2>
-      <div className="w-full mt-5">
-        <form ref={form} onSubmit={sendEmail}>
-          <ul className="p-0 m-0 sm:p-3 sm:m-3 md:p-2 md:m-2 list-none mb-5 overflow-hidden block clear-both relative animate ease-in duration-500 transition-all">
-            <li className="w-[100%] float-left clear-none mb-2">
+      <motion.div
+        inital={{
+          x: -500,
+          opacity: 0,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+        }}
+        transition={{ duration: 2.5 }}
+      >
+        <h2 className="text-4xl md:text-2xl sm:text-xl font-semibold">
+          Contact
+        </h2>
+      </motion.div>
+      <div className="flex flex-col justify-center items-center space-y-10 mt-10 md:mt-5">
+        <h4 className="text-4xl md:text-2xl sm:text-xl font-semibold text-center">
+          Come and Visit Us.{" "}
+          <span className="underline decoration-[#0086bb]/50">
+            Have Coffee.
+          </span>
+        </h4>
+
+        <div className="space-y-10">
+          <div className="flex items-center space-x-5 justify-center">
+            <PhoneIcon className="text-[#0086bb] h-7 w-7 animate-pulse" />
+            <p className="text-2xl sm:text-lg">+701-651-4989</p>
+          </div>
+          <div className="flex items-center space-x-5 sm:space-x-0 justify-center">
+            <EnvelopeIcon className="text-[#0086bb] h-7 w-7 animate-pulse" />
+            <p className="text-2xl sm:text-lg">dailyaddictionch@gmail.com</p>
+          </div>
+          <div className="flex items-center space-x-5 sm:space-x-0 justify-center">
+            <MapPinIcon className="text-[#0086bb] h-7 w-7 animate-pulse" />
+            <p className="text-2xl sm:text-lg">307 Main St, Williston, ND</p>
+          </div>
+          {!isFormSubmitted ? (
+            <form
+              className="flex flex-col space-y-2 mx-auto"
+              onSubmit={() => sendEmail()}
+              ref={form}
+            >
+              <div className="flex sm:flex-col space-x-2 sm:space-x-0">
+                <input
+                  type="text"
+                  className="contactInput"
+                  placeholder="Name"
+                  required
+                />
+                <input
+                  type="email"
+                  className="contactInput"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+
               <input
-                className="w-full border-0 bg-coffee-blue h-[50px] text-xl
-                   text-white pt-0 pr-2 box-border"
-                placeholder="Full Name"
-                type="text"
-                name="name"
-                required
-              />
-            </li>
-            <li className="w-[100%] float-left mb-2 clear-none">
-              <input
-                className="w-full border-0 bg-coffee-blue h-[50px] text-xl
-                   text-white pt-0 pr-2 box-border"
-                placeholder="Email"
-                type="email"
-                name="email"
-                required
-              />
-            </li>
-            <li>
-              <input
-                className="w-full border-0 mb-2 bg-coffee-blue h-[50px] text-xl
-                   text-white pt-0 pr-2 box-border"
                 placeholder="Subject"
                 type="text"
-                name="subject"
+                className="contactInput"
                 required
               />
-            </li>
-            <li>
+
               <textarea
-                className="w-full border-0 bg-coffee-blue h-[50px] text-xl text-white box-border min-h-[150px]"
-                placeholder="Enter your message"
-                name="message"
+                placeholder="Message"
+                name=""
+                className="contactInput"
                 required
-              ></textarea>
-            </li>
-            <li>
-              <input
-                type="submit"
-                className="text-white bg-coffee-blue hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                value="Send"
               />
-            </li>
-          </ul>
-          {/* <Recaptcha
-              sitekey={process.env.recaptcha}
-              render="explicit"
-              onloadCallback={recaptchaLoaded}
-              verifyCallback={verifiedRecaptcha}
-            /> */}
-        </form>
+              <button
+                type="submit"
+                className="cursor-pointer bg-[#0086bb] 
+                py-5 px-10 sm:py-2 sm:px-5 rounded-md text-white font-bold text-lg"
+              >
+                Submit
+              </button>
+            </form>
+          ) : (
+            <div className="flex flex-col items-center justify-center">
+              <h2 className="font-poppins text-2xl">
+                Thank you for getting in touch with us!
+              </h2>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
