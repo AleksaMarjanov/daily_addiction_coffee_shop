@@ -15,7 +15,7 @@ const Footer = () => {
   
 
   return (
-    <div className="p-5 -right-14 border-t-2  dark:bg-nft-dark bg-white  dark:border-nft-black-1 border-nft-gray-1 overflow-hidden">
+    <div className="p-5 -right-14 bg-coffee-dark text-white border-t-2 border-nft-gray-1 overflow-hidden">
 <div className="flex flex-row space-x-2 items-center justify-center"> 
     {socials?.map((social) => {
       <SocialIcon 
