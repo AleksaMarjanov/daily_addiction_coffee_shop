@@ -1,38 +1,61 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from "react";
 import { SocialIcon } from "react-social-icons";
-import { client } from '../client';
+import { client } from "../client";
+import { motion } from "framer-motion";
 
 const Footer = () => {
-  const [socials, setSocials] = useState([])
+  const [socials, setSocials] = useState([]);
 
   useEffect(() => {
-    const query = "*[type == 'social']"
-    
+    const query = "*[type == 'social']";
+
     client.fetch(query).then((data) => {
-      setSocials(data)
-    })
-  }, [])
-  
+      setSocials(data);
+    });
+  }, []);
 
   return (
-    <div className="p-5 -right-14 bg-coffee-dark text-white border-t-2 border-nft-gray-1 overflow-hidden">
-<div className="flex flex-row space-x-2 items-center justify-center"> 
-    {socials?.map((social) => {
-      <SocialIcon 
-         key={social._id}
+    <div className="sticky bottom-0 flex p-5 sm:p-2 px-10 items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
+      <motion.div
+        initial={{
+          x: -500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        className="flex flex-row items-center"
+      >
+      <div className="flex flex-row items-center">
+      {socials.map((social) => (
+        <SocialIcon
+          key={social._id}
           url={social.url}
           fgColor="gray"
           bgColor="transparent"
-      />
-    })}
-    
-</div>
-          <div className="flex flexBetween sm:text-xs sm:mt-3">
-          <p className="font-poppins xs:font-sm">{new Date().getFullYear()}  @Aleksa All Rights Reserved</p>
-          </div>
+        />
+        ))} 
+        
       </div>
+      </motion.div>
+      <SocialIcon 
+      url={`https://facebook.com/dailyaddictionch`}
+      fgColor="gray"
+      bgColor="transparent"
+      />
+      {/* <div className="flex flexBetween sm:text-xs sm:mt-3">
+        <p className="font-poppins xs:font-sm">
+          {new Date().getFullYear()} @Aleksa All Rights Reserved
+        </p>
+      </div> */}
+    </div>
   );
 };
 
-
-export default Footer
+export default Footer;
