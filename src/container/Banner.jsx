@@ -2,13 +2,12 @@ import Image from "next/image";
 import { images } from "../constants";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import AppWrap from "../wrapper/AppWrap";
 import MotionWrap from "../wrapper/MotionWrap";
 
 const Banner = ({src}) => {
   return (
     <>
-      <div className="relative xs:mt-[6.3rem] sm:mt-[6.2rem] minsm:mt-[6rem] minmd:mt-[5.4rem] md:mt-[5.85rem] lg:mt-[5.3rem] xl:mt-[5.4rem] z-0 w-full flex items-center overflow-hidden justify-center">
+      <div className="relative xs:mt-[6.3rem] sm:mt-[6.2rem] minsm:mt-[6.2rem] md:mt-[6.1rem] minmd:mt-[6.5rem] xl:mt-[6.40rem] z-0 w-full flex items-center overflow-hidden justify-center">
         <p className="font-poppins text-4xl sm:text-sm sm:mb-3 
         shadow-xl absolute left-96 md:left-4 md:text-2xl minmd:left-16 minlg:left-39 lg:left-64 z-20 text-white flex items-start justify-start">
           Daily Addiction<br/>

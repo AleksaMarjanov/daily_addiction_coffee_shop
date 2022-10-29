@@ -39,11 +39,11 @@ const Navbar = () => {
             }}
             transition={{ duration: 1.2 }}
           >
-          <div className="w-20 h-20 sm:hidden block">
+          <div className="w-20 h-20 sm:w-14 sm:h-14">
             <Image
               src={logo}
               alt="logo"
-              className="rounded-full md:hidden block"
+              className="rounded-full "
               objectFit="cover"
             />
           </div>
