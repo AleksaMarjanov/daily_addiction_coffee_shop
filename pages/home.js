@@ -63,23 +63,6 @@ const Home = () => {
             </div>
           ))}
         </figure>
-        {/* {homePageInfo.map((info, index) => {
-          <Link key = {info.name + index } href={`/${info.name}`}>
-            {console.log(info.imgurl)}
-          <div>
-          <h1 className="uppercase">{info.name}</h1>
-          <Image
-            className="rounded-lg shadow-xl hover:shadow-2xl"
-            src={`${urlFor(info?.imgurl)}`}         
-            width={400}
-            height={400}
-            objectFit="cover"
-            alt={info.name}
-          />
-          
-          </div>
-         </Link>
-        })} */}
       </div>
     </>
   );
