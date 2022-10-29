@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import logo from "../assets/logo.jpg";
+import Link from "next/link";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -49,59 +50,73 @@ const Navbar = () => {
           </motion.div>
         </a>
         <motion.div
-         initial={{
-           x: -500,
-           opacity: 0,
-         }}
-         animate={{
-           x: 0,
-           opacity: 1,
-         }}
-         transition={{ duration: 1.2 }}
-       >
-        <a
-          href="tel:701-651-4989"
-          className={`${
-            navbar ? "text-white" : "text-gray-800"
-          } font-poppins ml-5 text-sm xs:hidden sm:hidden`}
+          initial={{
+            x: -500,
+            opacity: 0,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{ duration: 1.2 }}
         >
-          📞(701)-651-4989
-        </a>
+          <a
+            href="tel:701-651-4989"
+            className={`${
+              navbar ? "text-white" : "text-gray-800"
+            } font-poppins ml-5 text-sm xs:hidden sm:hidden`}
+          >
+            📞(701)-651-4989
+          </a>
         </motion.div>
       </div>
-      <ul className="flex-1 flex items-center justify-center list-none md:hidden">
-        {["home", "about", "events", "menu", "location", "contact"].map(
-          (item, index) => (
-            <motion.div
-            key={index}
-              initial={{
-                x: 500,
-                opacity: 0,
-              }}
-              animate={{
-                x: 0,
-                opacity: 1,
-              }}
-              transition={{ duration: 1.2 }}
-            >
-              <li
-                className="mt-0 mr-4 cursor-pointer flex flex-col items-center justify-center group font-poppins list-none"
-                key={`link-${item}`}
+      <div className="flex items-center justify-beetween flex-row">
+        <ul className="flex-1 flex items-center justify-center list-none md:hidden">
+          {["home", "about", "events", "menu", "location", "contact"].map(
+            (item, index) => (
+              <motion.div
+                key={index}
+                initial={{
+                  x: 500,
+                  opacity: 0,
+                }}
+                animate={{
+                  x: 0,
+                  opacity: 1,
+                }}
+                transition={{ duration: 1.2 }}
               >
-                <div className="md:w-[5px] md:h-[5px] xl:w-[7px] xl:h-[7px] rounded-full mb-[5px] group-hover:bg-secondary-color animate-bounce bg-transparent" />
-                <a
-                  href={`${item}`}
-                  className={`${
-                    navbar ? "text-white" : "text-gray-800"
-                  } flex flex-col uppercase no-underline font-normal transition-all ease-in-out duration-300 group-hover:text-secondary-color`}
+                <li
+                  className="mt-0 mr-4 cursor-pointer flex flex-col items-center justify-center group font-poppins list-none"
+                  key={`link-${item}`}
                 >
-                  {item}
-                </a>
-              </li>
-            </motion.div>
-          )
-        )}
-      </ul>
+                  <div className="md:w-[5px] md:h-[5px] xl:w-[7px] xl:h-[7px] rounded-full mb-[5px] group-hover:bg-secondary-color animate-bounce bg-transparent" />
+                  <a
+                    href={`${item}`}
+                    className={`${
+                      navbar ? "text-white" : "text-gray-800"
+                    } flex flex-col uppercase no-underline font-normal transition-all ease-in-out duration-300 group-hover:text-secondary-color`}
+                  >
+                    {item}
+                  </a>
+                </li>
+              </motion.div>
+            )
+          )}
+        </ul>
+        <Link href="https://www.doordash.com/en-CA/store/daily-addiction-coffee-house-williston-1312569/">
+          <motion.button
+            className="box absolute text-md py-4 px-8 font-poppins font-semibold text-white text-xs sm:pt-2 sm:mb-5 rounded-full 
+            md:bottom-5 md:text-sm lg:bottom-10 sm:bottom-0 
+            button-gradient sm:text-xs sm:py-2 sm:px-2 minlg:text-lg xl:mt-56 xl:text-xl
+             minlg:px-8 sm:mt-5 "
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            Order Now
+          </motion.button>
+        </Link>
+      </div>
 
       <div className="w-[35px] h-[35px] flex rounded-full relative items-center justify-center xl:hidden md:block mt-2 mr-4 xl:">
         <HiMenuAlt4
