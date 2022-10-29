@@ -15,7 +15,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="sticky bottom-0 flex p-5 sm:p-2 px-10 items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
+    <div className="sticky bottom-0 flex p-5 sm:p-2 px-10 items-start justify-between max-w-7xl mx-auto z-10 xl:items-center">
       <motion.div
         initial={{
           x: -500,
