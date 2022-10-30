@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import MotionWrap from "../wrapper/MotionWrap";
 
-const Banner = ({src}) => {
+const Banner = () => {
   return (
     <>
       <div className="relative xs:mt-[5.1rem] sm:mt-[5rem] minsm:mt-[6.2rem] md:mt-[6.1rem] minmd:mt-[6.5rem] xl:mt-[6.40rem] z-0 w-full flex items-center overflow-hidden justify-center">

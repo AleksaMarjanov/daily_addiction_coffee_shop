@@ -90,7 +90,7 @@ const Navbar = () => {
                 className="mt-0 cursor-pointer flex flex-col items-center justify-center group font-poppins list-none"
                 key={`link-${item}`}
               >
-                <div className="md:w-[5px] md:h-[5px] xl:w-[7px] xl:h-[7px] rounded-full mb-[5px] group-hover:bg-secondary-color animate-bounce bg-transparent" />
+                <div className={`md:w-[5px] md:h-[5px] xl:w-[7px] xl:h-[7px] rounded-full mb-[5px] group-hover:bg-secondary-color animate-bounce bg-transparent`}/>
                 <a
                   href={`${item}`}
                   className={`${
@@ -103,7 +103,7 @@ const Navbar = () => {
             </motion.div>
           )
         )}
-        <div className="mt-8">
+        <div className="mt-8 ">
           <motion.div
             initial={{
               x: 500,
@@ -117,14 +117,13 @@ const Navbar = () => {
           >
             <Link href="https://www.doordash.com/en-CA/store/daily-addiction-coffee-house-williston-1312569/">
               <motion.button
-                className="box relative mt-10 text-md py-2 px-2 font-poppins font-semibold text-white text-xs sm:pt-2 sm:mb-5 rounded-full
-            md:bottom-5 lg:bottom-10 sm:bottom-0 
+                className={`box absolute text-sm py-2 px-6 font-poppins font-semibold text-white sm:pt-2 sm:mb-5 rounded-full xl:bottom-6
             button-gradient sm:py-2 sm:px-2 
-             "
+             ${navbar ? "coffee-gradient" : ""} `}
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                Order Now
+                Order
               </motion.button>
             </Link>
           </motion.div>
@@ -178,7 +177,7 @@ const Navbar = () => {
               <div className="mt-10">
                 <Link href="https://www.doordash.com/en-CA/store/daily-addiction-coffee-house-williston-1312569/">
                   <motion.button
-                    className="box z-[20] text-md py-2 px-2 mb-32 font-poppins font-semibold text-white text-xs sm:pt-2 sm:mb-5 rounded-full
+                    className="box z-[20] text-md py-2 px-4 mb-32 font-poppins font-semibold text-white text-xs sm:pt-2 sm:mb-5 rounded-full
             md:bottom-5 lg:bottom-10 sm:bottom-0 
             button-gradient md:py-4 md:px-4 md:text-sm 
              "
