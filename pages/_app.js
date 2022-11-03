@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
       <Head></Head>
       <div className="">
         <Navbar />
-        {/* <Banner /> */}
+        <Banner />
         <Component {...pageProps} />
         <Footer />
         <Script>
