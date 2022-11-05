@@ -38,19 +38,24 @@ const Home = () => {
       </Head>
       <div
         id="home"
-        className="w-full font-poppins text-3xl flex flex-row justify-center items-center"
+        className="w-full font-poppins text-3xl mt-8 flex flex-row justify-center items-center"
       >
-        <figure className="relative max-w-xs cursor-pointer">
+      <div className="space-x-12 w-1/3">
+        <p className="font-poppins uppercase text-3xl">visit us</p>
+          <span>307 Main St, Williston, ND 58801</span>
+      </div>
+        <>
+        <figure className="relative space-y-6 max-w-xl cursor-pointer">
           {homePageInfo?.map((info, index) => (
             <div key={info.name + index}>
               <Link href={`/${info.name.toLowerCase()}`}>
-                <div className="shadow-2xl">
+                <div className="shadow-xl flex-row space-x-5  cursor-pointer">
                   <Image
                     src={`${urlFor(info?.imgurl)}`}
-                    width={400}
-                    height={400}
+                    width={800}
+                    height={800}
                     objectFit="cover"
-                    className="cover"
+                    className="cover rounded-lg"
                     alt={info.name}
                   />
                   <figcaption className="absolute -mt-16 text-4xl  text-white px-4">
@@ -63,6 +68,7 @@ const Home = () => {
             </div>
           ))}
         </figure>
+        </>
       </div>
     </>
   );
