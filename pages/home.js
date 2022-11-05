@@ -38,37 +38,50 @@ const Home = () => {
       </Head>
       <div
         id="home"
-        className="w-full font-poppins text-3xl mt-8 flex flex-row justify-center items-center"
+        className="w-full font-poppins mt-8 flex flex-row justify-center items-center"
       >
-      <div className="space-x-12 w-1/3">
-        <p className="font-poppins uppercase text-3xl">visit us</p>
-          <span>307 Main St, Williston, ND 58801</span>
-      </div>
-        <>
-        <figure className="relative space-y-6 max-w-xl cursor-pointer">
-          {homePageInfo?.map((info, index) => (
-            <div key={info.name + index}>
-              <Link href={`/${info.name.toLowerCase()}`}>
-                <div className="shadow-xl flex-row space-x-5  cursor-pointer">
-                  <Image
-                    src={`${urlFor(info?.imgurl)}`}
-                    width={800}
-                    height={800}
-                    objectFit="cover"
-                    className="cover rounded-lg"
-                    alt={info.name}
-                  />
-                  <figcaption className="absolute -mt-16 text-4xl  text-white px-4">
-                    <div>
-                      <h1 className="uppercase">{info.name}</h1>
-                    </div>
-                  </figcaption>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </figure>
-        </>
+        <div className="space-y-5 w-1/3 flex flex-col mt-0 items-center justify-center">
+          <p className="uppercase text-4xl justify-center text-center">Visit us</p>
+          <p className="text-lg underline">307 Main St, Williston, ND 58801</p>
+          <a href="tel:701-651-4989" className="ml-5 text-lg underline">
+            701.651.4989
+          </a>
+          <p className="text-lg text-center justify-center items-center">
+          9AM–4PM<br/>
+            Saturday
+            <br />
+            Sunday Closed
+            <br />
+            <span>7AM–5PM</span>
+            <br />
+            Monday - Friday
+          </p>
+        </div>
+        <div>
+          <figure className="relative space-y-6 sm:max-w-xs minmd:max-w-sm max-w-xl cursor-pointer">
+            {homePageInfo?.map((info, index) => (
+              <div key={info.name + index}>
+                <Link href={`/${info.name.toLowerCase()}`}>
+                  <div className="shadow-xl flex-row space-x-5  cursor-pointer">
+                    <Image
+                      src={`${urlFor(info?.imgurl)}`}
+                      width={800}
+                      height={800}
+                      objectFit="cover"
+                      className="cover rounded-lg"
+                      alt={info.name}
+                    />
+                    <figcaption className="absolute -mt-16 text-4xl  text-white px-4">
+                      <div>
+                        <h1 className="uppercase">{info.name}</h1>
+                      </div>
+                    </figcaption>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </figure>
+        </div>
       </div>
     </>
   );
