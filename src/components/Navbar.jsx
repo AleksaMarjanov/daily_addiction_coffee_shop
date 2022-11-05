@@ -72,7 +72,7 @@ const Navbar = () => {
       </div>
 
       <ul className="flex-1 space-x-6 md:space-x-0 flex items-center justify-center  list-none md:hidden">
-        {["home", "about", "events", "menu", "location", "contact"].map(
+        {["home", "about", "events", "menu", "hours & location", "contact"].map(
           (item, index) => (
             <motion.div
               key={index}
@@ -159,7 +159,7 @@ const Navbar = () => {
                     objectFit="cover"
                   />
                 </a>
-                {["home", "about", "events", "menu", "location", "contact"].map(
+                {["home", "about", "events", "menu", "hours & location", "contact"].map(
                   (item) => (
                     <li key={item} className="m-4">
                       <a
