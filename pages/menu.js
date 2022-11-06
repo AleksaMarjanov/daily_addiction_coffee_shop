@@ -46,7 +46,7 @@ const menus = () => {
   return (
     <div className="flex-1 w-full flex-col font-poppins ">
       <div className="flex flex-row flex-wrap justify-center items-center mt-16 mr-0 mb-8">
-        {["Breakfast", "Deserts", "Drinks", "All"].map((item, index) => (
+        {["Drinks","Breakfast", "Deserts" , "All"].map((item, index) => (
           <div
             key={index}
             onClick={() => handleMenusFilter(item)}

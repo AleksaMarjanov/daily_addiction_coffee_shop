@@ -38,8 +38,8 @@ const Location = () => {
         <div className="mt-6 md:mt-2 relative z-[0] h-[60vh] w-[80%] md:w-[75%] sm:w-[80%]">
           <Map />
         </div>
-        <div className="absolute left-[45%] bottom-0 z-200 -mb-80">
-          <button className='border-2 border-black decoration-none cursor-pointer p-3 text-lg  font-poppins uppercase tracking-[1px] hover:border-[#0086bb] transition-all ease-out' type="button" onClick={() => router.push('https://www.google.com/maps/dir/48.1574907,-103.6397794/daily+addiction+williston+nd/@48.1522838,-103.6395727,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x53215b6088f0b3a5:0xbadcade96cc8ebc7!2m2!1d-103.6220281!2d48.1468544')}>Get Directions</button>
+        <div className="absolute left-[45%] bottom-0 z-200 -mb-80 minmd:-mb-128">
+          <button className='border-2 border-black decoration-none cursor-pointer p-3 minmd:p-1 text-lg minmd:text-sm font-poppins uppercase tracking-[1px] hover:border-[#0086bb] transition-all ease-out' type="button" onClick={() => router.push('https://www.google.com/maps/dir/48.1574907,-103.6397794/daily+addiction+williston+nd/@48.1522838,-103.6395727,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x53215b6088f0b3a5:0xbadcade96cc8ebc7!2m2!1d-103.6220281!2d48.1468544')}>Get Directions</button>
         </div>
       </div>
     </>
