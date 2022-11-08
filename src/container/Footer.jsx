@@ -47,6 +47,11 @@ const Footer = () => {
       fgColor="gray"
       bgColor="transparent"
       />
+      <SocialIcon 
+      url={`https://www.instagram.com/dailyaddictioncoffeehouse/`}
+      fgColor="gray"
+      bgColor="transparent"
+      />
       </motion.div>
       {/* <div className="flex flexBetween sm:text-xs sm:mt-3">
         <p className="font-poppins xs:font-sm">
