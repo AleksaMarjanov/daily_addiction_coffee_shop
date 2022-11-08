@@ -60,34 +60,43 @@ const Events = () => {
           />
         </div>
       </div>
-      <div >
-  <section className="max-w-7xl px-8 py-10">
-    <h1 className="text-4xl font-extrabold text-center text-gray-900">Latest Events</h1>
-    <div className="my-10 grid gap-6 lg:grid-cols-3 sm:flex sm:flex-col">
-      {events.map((event,index) => (
-      <div key={event.name + index}>
-        <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
-          <Image
-          src={`${urlFor(event.imgurl)}`}
-          width={400}
-          height={400}
-          objectFit="cover"
-          className="w-full h-56 object-cover object-center"
-          alt={event.name}
-          />
-          <div className="p-6">
-            <h2 className="text-2xl font-bold line-clamp-1 text-gray-900">{event.name}</h2>
-            <p className="mt-3 text-gray-700 line-clamp-3">{event.description}</p>
-            <a className="mt-4 inline-block px-4 py-1.5 bg-blue-300 rounded text-blue-900 font-semibold tracking-wide hover:bg-blue-800 hover:text-blue-100" href="#">Read more</a>
+      <div>
+        <section className="max-w-7xl px-8 py-10">
+          <h1 className="text-4xl font-extrabold text-center text-gray-900">
+            Latest Events
+          </h1>
+          <div className="my-10 grid gap-6 lg:grid-cols-3 sm:flex sm:flex-col">
+            {events.map((event, index) => (
+              <div key={event.name + index}>
+                <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
+                  <Image
+                    src={`${urlFor(event.imgurl)}`}
+                    width={400}
+                    height={400}
+                    objectFit="cover"
+                    className="w-full h-56 object-cover object-center"
+                    alt={event.name}
+                  />
+                  <div className="p-6">
+                    <h2 className="text-2xl font-bold line-clamp-1 text-gray-900">
+                      {event.name}
+                    </h2>
+                    <p className="mt-3 text-gray-700 line-clamp-3">
+                      {event.description}
+                    </p>
+                    <a
+                      className="mt-4 inline-block px-4 py-1.5 bg-blue-300 rounded text-blue-900 font-semibold tracking-wide hover:bg-blue-800 hover:text-blue-100"
+                      href="#"
+                    >
+                      Read more
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
+        </section>
       </div>
-      ))}
-      </div>
-  </section>
- 
-</div>
-      
     </div>
   );
 };

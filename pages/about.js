@@ -3,41 +3,50 @@ import AppWrap from "../src/wrapper/AppWrap";
 import MotionWrap from "../src/wrapper/MotionWrap";
 import {client, urlFor} from '../src/client'
 import Image from "next/image";
+import Link from "next/link";
 
 
 const About = () => {
   const [gallery, setGallery] = useState([]);
   
   useEffect(() => {
-    const query = '*[_type == "homePageInfo" ]';
+    const query = '*[_type == "gallery" ]';
 
     client.fetch(query).then((data) => {
       setGallery(data);
+      console.log({data})
     });
   }, []);
   return (
   
-    <div className="flex flex-col items-center justify-center space-y-5">
+    <main className="flex flex-col items-center justify-center space-y-5">
       <div id="about" className="flex flex-col font-poppins ">
-        <div className="animate-extend2 overflow-x-hidden no-scrollbar whitespace-nowrap duration-700 text-6xl md:text-4xl justify-center items-center font-semibold">
+      <section>
+        <div className="flex text-6xl md:text-4xl sm:text-xl justify-center items-center font-semibold">
           About
         </div>
-        <span className="font-semibold first-line:items-center justify-center mt-5 tracking-[1px]">
+        <span className="flex font-semibold items-center justify-center mt-10  sm:text-sm sm:p-1 tracking-[1px]">
         Locally owned<br/>full service specialty coffeehouse<br/> in the heart of Downtown Williston, ND.
         </span>
-        {gallery?.map((image, index) => {
-          <div key={image.imgUrl + index} className="shadow-xl flex-row space-x-5 ">
+      </section>
+        <figure className="mt-5 grid gap-6 grid-rows-2 grid-flow-col minmd:grid-rows-3 lg:grid-rows-2 sm:flex sm:flex-col max-w-sm sm:max-w-lg minmd:max-w-xl cursor-pointer">
+            {gallery?.map((images, index) => (
+              <div key={images.name + index}>
+                  <div className="shadow-xl items-center justify-center flex object-fit object-contain">
                     <Image
-                      src={`${urlFor(image?.imgurl)}`}
+                      src={`${urlFor(images?.imgurl)}`}
                       width={400}
                       height={400}
                       objectFit="cover"
                       className="cover rounded-lg"
+                      alt={images.name}
                     />
-          </div>
-        })}
+                  </div>
+              </div>
+            ))}
+          </figure>
       </div>
-    </div>
+    </main>
   );
 };
 
