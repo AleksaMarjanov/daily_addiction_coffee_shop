@@ -65,10 +65,10 @@ const Events = () => {
           <h1 className="text-4xl font-extrabold text-center text-gray-900">
             Latest Events
           </h1>
-          <div className="my-10 grid gap-6 lg:grid-cols-3 sm:flex sm:flex-col">
+          <div className="my-10 grid gap-6 lg:grid-cols-3 xl:flex xl:flex-row sm:flex sm:flex-col">
             {events.map((event, index) => (
               <div key={event.name + index}>
-                <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
+                <div className="bg-white flex flex-col items-center justify-center max-w-sm rounded-xl shadow-2xl overflow-hidden">
                   <Image
                     src={`${urlFor(event.imgurl)}`}
                     width={400}
