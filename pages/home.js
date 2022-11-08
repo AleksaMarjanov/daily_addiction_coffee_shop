@@ -5,6 +5,7 @@ import Image from "next/image";
 import { images } from "../src/constants";
 import SEO from "@bradgarropy/next-seo";
 import Head from "next/head";
+import { motion } from 'framer-motion'
 
 import { client, urlFor } from "../src/client";
 import Link from "next/link";
@@ -58,6 +59,21 @@ const Home = () => {
           </p>
         </div>
         <div>
+        <motion.div
+                  initial={{
+                    x: 500,
+                    opacity: 0,
+                    scale: 0.5,
+                  }}
+                  animate={{
+                    x: 0,
+                    opacity: 1,
+                    scale: 1,
+                  }}
+                  transition={{
+                    duration: 1.5,
+                  }}
+                >
           <figure className="relative space-y-6 sm:max-w-xs minmd:max-w-sm max-w-xl cursor-pointer">
             {homePageInfo?.map((info, index) => (
               <div key={info.name + index}>
@@ -81,6 +97,7 @@ const Home = () => {
               </div>
             ))}
           </figure>
+          </motion.div>
         </div>
       </div>
     </>
