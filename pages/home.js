@@ -45,7 +45,7 @@ const Home = () => {
           <p className="uppercase text-4xl justify-center text-center">Visit us</p>
           <p className="text-lg underline">307 Main St, Williston, ND 58801</p>
           <a href="tel:701-651-4989" className="ml-5 text-lg underline">
-            701.651.4989
+            701.609.5198
           </a>
           <p className="text-lg text-center justify-center items-center">
           9AM–4PM<br/>

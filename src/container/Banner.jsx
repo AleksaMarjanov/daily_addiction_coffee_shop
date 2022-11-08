@@ -11,7 +11,7 @@ const Banner = () => {
         <p className="font-poppins text-4xl sm:text-sm sm:mb-3 
         shadow-xl absolute left-96 md:left-4 md:text-2xl minmd:left-16 minlg:left-39 lg:left-64 z-20 text-white flex items-start justify-start">
           Daily Addiction<br/>
-          Coffee House
+          Coffeehouse
         </p>
         <Image
           className="relative"

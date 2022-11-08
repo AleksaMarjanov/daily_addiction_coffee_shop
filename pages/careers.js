@@ -28,7 +28,7 @@ const Careers = () => {
             Great People.
           </span>
         </h4>
-
+{/* Submit should go to https:// See Text Msg from Kendra */}
       <form
               className="flex flex-col space-y-2 mx-auto"
               onSubmit={() => sendEmail()}
@@ -50,14 +50,14 @@ const Careers = () => {
               </div>
 
               <input
-                placeholder="Subject"
+                placeholder="Desired Position"
                 type="text"
                 className="contactInput"
                 required
               />
 
               <textarea
-                placeholder="Message"
+                placeholder="Cover Letter"
                 name=""
                 className="contactInput"
                 required

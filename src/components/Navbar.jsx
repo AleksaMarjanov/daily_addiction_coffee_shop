@@ -66,7 +66,7 @@ const Navbar = () => {
               navbar ? "text-white" : "text-gray-800"
             } font-poppins ml-5 text-xs md:hidden`}
           >
-            📞(701)-651-4989
+            📞(701)-609-5198
           </a>
         </motion.div>
       </div>
