@@ -11,11 +11,13 @@ const Footer = () => {
 
     client.fetch(query).then((data) => {
       setSocials(data);
+      console.log({data})
     });
   }, []);
 
+
   return (
-    <div className="sticky bottom-0 flex p-5 sm:p-2 px-10 items-start justify-between max-w-7xl mx-auto z-10 xl:items-center">
+    <div className="sticky bottom-0 w-full bg-gray-100 flex p-5 sm:p-2 px-10 items-start justify-between max-w-7xl z-10 mx-auto  xl:items-center">
       <motion.div
         initial={{
           x: -500,
@@ -32,8 +34,8 @@ const Footer = () => {
         }}
         className="flex flex-row items-center"
       >
-      <div className="flex flex-row items-center">
-      {socials.map((social) => (
+      <div className="flex flex-row items-center cursor-pointer bg-black">
+      {socials?.map((social) => (
         <SocialIcon
           key={social._id}
           url={social.url}
@@ -42,13 +44,13 @@ const Footer = () => {
         />
         ))} 
         
-      </div>
+      </div> 
       </motion.div>
-      <SocialIcon 
+      {/* <SocialIcon 
       url={`https://facebook.com/dailyaddictionch`}
       fgColor="gray"
       bgColor="transparent"
-      />
+      /> */}
       {/* <div className="flex flexBetween sm:text-xs sm:mt-3">
         <p className="font-poppins xs:font-sm">
           {new Date().getFullYear()} @Aleksa All Rights Reserved
