@@ -52,6 +52,11 @@ const Footer = () => {
       fgColor="gray"
       bgColor="transparent"
       />
+      <SocialIcon 
+      url={`https://www.https://www.toasttab.com/daily-addiction-307-main-st/v3.com/daily-addiction-307-main-st/v3.com/dailyaddictioncoffeehouse/`}
+      fgColor="gray"
+      bgColor="transparent"
+      />
       </motion.div>
       {/* <div className="flex flexBetween sm:text-xs sm:mt-3">
         <p className="font-poppins xs:font-sm">

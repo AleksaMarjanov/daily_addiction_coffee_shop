@@ -115,7 +115,7 @@ const Navbar = () => {
             }}
             transition={{ duration: 1.2 }}
           >
-            <Link href="https://www.doordash.com/en-CA/store/daily-addiction-coffee-house-williston-1312569/">
+            <Link href="https://www.toasttab.com/daily-addiction-307-main-st/v3">
               <motion.button
                 className={`box absolute text-sm py-2 px-6 font-poppins font-semibold text-white sm:pt-2 sm:mb-5 rounded-full xl:bottom-6
             button-gradient sm:py-2 sm:px-2 
@@ -154,8 +154,8 @@ const Navbar = () => {
                     src={logo}
                     alt="logo"
                     width={240}
-                    height={120}
-                    className="rounded-xl"
+                    height={140}
+                    className="rounded-xlp"
                     objectFit="cover"
                   />
                 </a>
@@ -175,7 +175,7 @@ const Navbar = () => {
                 )}
               </div>
               <div className="mt-10">
-                <Link href="https://www.doordash.com/en-CA/store/daily-addiction-coffee-house-williston-1312569/">
+                <Link href="https://www.toasttab.com/daily-addiction-307-main-st/v3">
                   <motion.button
                     className="box z-[20] text-md py-2 px-4 mb-32 font-poppins font-semibold text-white text-xs sm:pt-2 sm:mb-5 rounded-full
             md:bottom-5 lg:bottom-10 sm:bottom-0 

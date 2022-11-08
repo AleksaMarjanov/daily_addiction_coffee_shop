@@ -21,7 +21,7 @@ const Banner = () => {
           height={400}
           alt="hero"
         />
-        <Link href="https://www.doordash.com/en-CA/store/daily-addiction-coffee-house-williston-1312569/">
+        <Link href="https://www.toasttab.com/daily-addiction-307-main-st/v3">
           <motion.button
             className="box absolute text-md py-4 px-8 font-poppins font-semibold text-white text-xs sm:pt-2 sm:mb-5 rounded-full 
             md:bottom-5 md:text-sm lg:bottom-10 sm:bottom-0 

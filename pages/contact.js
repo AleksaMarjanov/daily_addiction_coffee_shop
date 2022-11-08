@@ -65,7 +65,7 @@ const Contact = () => {
           </div>
           <div className="flex items-center space-x-5 sm:space-x-0 justify-center">
             <EnvelopeIcon className="text-[#0086bb] h-7 w-7 animate-pulse" />
-            <p className="text-2xl sm:text-lg">dailyaddictionch@gmail.com</p>
+            <p className="text-2xl sm:text-lg">dailyaddiction@outlook.com</p>
           </div>
           <div className="flex items-center space-x-5 sm:space-x-0 justify-center">
             <MapPinIcon className="text-[#0086bb] h-7 w-7 animate-pulse" />
