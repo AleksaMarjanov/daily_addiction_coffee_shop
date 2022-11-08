@@ -50,8 +50,8 @@ const Events = () => {
 
   return (
     <div className="font-poppins">
-      <div className="flexBetween mx-4 xs:mx-0 sm:mx-4 minlg:mx-8 sm:flex-col sm:items-start">
-        <div className="flex-2 sm:w-full flex flex-row sm:flex-col">
+      <div className="flex justify-center items-center mx-4 xs:mx-0 sm:mx-4 minlg:mx-8 sm:flex-col sm:items-start">
+        <div className="sm:w-full flex items-center justify-center flex-row sm:flex-col">
           <SearchBar
             activeSelect={activeSelect}
             setActiveSelect={setActiveSelect}
