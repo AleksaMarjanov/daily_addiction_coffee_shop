@@ -4,7 +4,7 @@ import MotionWrap from "../src/wrapper/MotionWrap";
 import {client, urlFor} from '../src/client'
 import Image from "next/image";
 import Link from "next/link";
-
+import { motion } from 'framer-motion'
 
 const About = () => {
   const [gallery, setGallery] = useState([]);
@@ -29,10 +29,28 @@ const About = () => {
         Locally owned<br/>full service specialty coffeehouse<br/> in the heart of Downtown Williston, ND.
         </span>
       </section>
-        <figure className="mt-5 grid gap-6 grid-rows-2 grid-flow-col minmd:grid-rows-3 lg:grid-rows-2 sm:flex sm:flex-col max-w-sm sm:max-w-lg minmd:max-w-xl cursor-pointer">
+        <figure className="mt-5 grid gap-6 grid-rows-2 grid-flow-col minmd:grid-rows-3 lg:grid-rows-2 sm:flex sm:flex-col max-w-6xl sm:max-w-lg minmd:max-w-xl cursor-pointer">
             {gallery?.map((images, index) => (
               <div key={images.name + index}>
                   <div className="shadow-xl items-center justify-center flex object-fit object-contain">
+                  <motion.div
+                  initial={{
+          x: -500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1,
+        }}
+        whileHover={{
+          scale: 1.1,
+        }}
+                  >
                     <Image
                       src={`${urlFor(images?.imgurl)}`}
                       width={400}
@@ -41,6 +59,7 @@ const About = () => {
                       className="cover rounded-lg"
                       alt={images.name}
                     />
+                  </motion.div>
                   </div>
               </div>
             ))}
