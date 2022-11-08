@@ -31,7 +31,7 @@ const About = () => {
             <br /> in the heart of Downtown Williston, ND.
           </span>
         </section>
-        <figure className="mt-5 grid gap-6 grid-rows-2 grid-flow-col minmd:grid-rows-3 lg:grid-rows-2 sm:flex sm:flex-col max-w-6xl sm:max-w-lg minmd:max-w-xl cursor-pointer">
+        <figure className="mt-5 grid gap-6 grid-rows-2 grid-flow-col lg:grid-rows-1 sm:flex sm:flex-col max-w-6xl sm:max-w-lg minmd:max-w-xl cursor-pointer">
           {gallery?.map((images, index) => (
             <div key={images.name + index}>
               <div className="shadow-xl items-center justify-center flex object-fit object-contain">
