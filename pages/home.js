@@ -41,7 +41,7 @@ const Home = () => {
         id="home"
         className="w-full font-poppins mt-8 flex flex-row minsm:flex-col minsm:space-y-6 justify-center items-center xl:text-6xl"
       >
-        <div className="space-y-5 w-1/3 flex flex-col mt-0 items-center justify-center">
+        <div className="space-y-5 w-1/3 lg:w-full flex flex-col mt-0 items-center justify-center">
           <p className="uppercase text-4xl minsm:text-3xl justify-center text-center">
             Visit us
           </p>
@@ -49,7 +49,7 @@ const Home = () => {
           <a href="tel:701-651-4989" className="ml-5 text-lg underline">
             701.609.5198
           </a>
-          <p className="text-lg flex text-center justify-center items-center">
+          <p className="text-lg text-center justify-center items-center">
             Monday - Friday 
             <br />
             <span>7AM–5PM</span>
