@@ -39,7 +39,7 @@ const Home = () => {
       </Head>
       <div
         id="home"
-        className="w-full font-poppins mt-8 flex flex-row justify-center items-center"
+        className="w-full font-poppins mt-8 flex flex-row minsm:flex-col minsm:space-y-6 justify-center items-center xl:text-6xl"
       >
         <div className="space-y-5 w-1/3 flex flex-col mt-0 items-center justify-center">
           <p className="uppercase text-4xl justify-center text-center">
@@ -81,7 +81,7 @@ const Home = () => {
               {homePageInfo?.map((info, index) => (
                 <div key={info.name + index}>
                   <Link href={`/${info.name.toLowerCase()}`}>
-                    <div className="shadow-xl flex-row space-x-5  cursor-pointer">
+                    <div className="shadow-xl flex-row space-x-5  cursor-pointer opacity-100">
                       <Image
                         src={`${urlFor(info?.imgurl)}`}
                         width={800}
@@ -90,7 +90,7 @@ const Home = () => {
                         className="cover rounded-lg"
                         alt={info.name}
                       />
-                      <figcaption className="absolute -mt-16 text-4xl  text-white px-4">
+                      <figcaption className="absolute -mt-16 text-4xl -ml-8 text-white font-semibold lg:text-2xl lg:px-8 px-12">
                         <div>
                           <h1 className="uppercase">{info.name}</h1>
                         </div>

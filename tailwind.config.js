@@ -99,7 +99,7 @@ module.exports = {
       minlg: {max: '1600px'},
       minmd: {max: '1300px '},
       md: { max: '990px' },
-      minsm: {max: '750px'},
+      minsm: {max: '768px'},
       sm: { max: '600px' },
       xs: { max: '400px' },
       // minmd: '1700px',
