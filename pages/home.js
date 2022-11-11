@@ -42,14 +42,14 @@ const Home = () => {
         className="w-full font-poppins mt-8 flex flex-row minsm:flex-col minsm:space-y-6 justify-center items-center xl:text-6xl"
       >
         <div className="space-y-5 w-1/3 flex flex-col mt-0 items-center justify-center">
-          <p className="uppercase text-4xl justify-center text-center">
+          <p className="uppercase text-4xl minsm:text-3xl justify-center text-center">
             Visit us
           </p>
           <p className="text-lg underline">307 Main St, Williston, ND 58801</p>
           <a href="tel:701-651-4989" className="ml-5 text-lg underline">
             701.609.5198
           </a>
-          <p className="text-lg text-center justify-center items-center">
+          <p className="text-lg flex text-center justify-center items-center">
             Monday - Friday 
             <br />
             <span>7AM–5PM</span>
@@ -90,7 +90,7 @@ const Home = () => {
                         className="cover rounded-lg"
                         alt={info.name}
                       />
-                      <figcaption className="absolute -mt-16 text-4xl -ml-8 text-white font-semibold lg:text-2xl lg:px-8 px-12">
+                      <figcaption className="absolute -mt-16 text-4xl -ml-8 text-white font-semibold lg:text-2xl lg:px-4 lg:-mt-20 px-12">
                         <div>
                           <h1 className="uppercase">{info.name}</h1>
                         </div>
