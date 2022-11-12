@@ -5,7 +5,7 @@ const Careers = () => {
  const { form } = useRef()
 
   return (
-    <div className="flex flex-col justify-center items-center ">
+    <main className="flex flex-col justify-center items-center h-screen">
         <motion.div
         inital={{
           x: -500,
@@ -71,7 +71,7 @@ const Careers = () => {
               </button>
             </form>
             </div>
-    </div>
+    </main>
   );
 };
 
