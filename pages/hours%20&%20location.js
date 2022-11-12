@@ -37,7 +37,7 @@ const Location = () => {
         <div className="mt-6 md:mt-2 relative z-[0] h-[60vh] w-[80%] md:w-[75%] sm:w-[80%]">
           <Map />
         </div>
-        <div className="absolute left-[45%] bottom-0 z-200 -mb-80 minmd:-mb-128">
+        <div className="absolute left-[45%] bottom-0 z-200 -mb-80 minmd:-mb-128 minsm:-mb-4 minsm:-mr-8">
           <button
             className="border-2 border-black decoration-none cursor-pointer p-3 minmd:p-1 text-lg minmd:text-sm font-poppins uppercase tracking-[1px] hover:border-[#0086bb] transition-all ease-out"
             type="button"
