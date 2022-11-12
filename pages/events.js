@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { client, urlFor } from "../src/client";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { useRouter } from "next/router";
+
 
 const SearchBar = dynamic(() => import("../src/container/SearchBar"), {
   ssr: false,
@@ -15,12 +17,14 @@ const Events = () => {
   const [events, setEvents] = useState([]);
   const [eventsCopy, setEventsCopy] = useState([]);
   const [activeSelect, setActiveSelect] = useState(false);
+  const router = useRouter()
 
   const fetchEvents = () => {
     const query = '*[_type == "events" ]';
 
     client.fetch(query).then((data) => {
       setEvents(data);
+      console.log({data})
     });
   };
 
@@ -84,12 +88,12 @@ const Events = () => {
                     <p className="mt-3 text-gray-700 line-clamp-3">
                       {event.description}
                     </p>
-                    <a
+                    <button
                       className="mt-4 inline-block px-4 py-1.5 bg-blue-300 rounded text-blue-900 font-semibold tracking-wide hover:bg-blue-800 hover:text-blue-100"
-                      href="#"
+                    onClick={() => router.push(`/eventsInfo/${event._id}`)}
                     >
                       Read more
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>

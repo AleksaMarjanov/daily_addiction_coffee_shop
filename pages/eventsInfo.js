@@ -9,14 +9,20 @@ const eventsInfo = () => {
       const query = '*[_type == "events" ]';
   
       client.fetch(query).then((data) => {
-        setEvents(data);
+        setEvent(data);
+        console.log({data})
       });
-    }) 
+    }, []) 
    
     
     return (
       <main className='flex flex-col items-center justify-center font-poppins'>
-          <h1 className='text-4xl minms:text-2xl'>{event.name}</h1>
+      {event?.map((item) => {
+            <div key={item._id}>
+          <h1 className='text-4xl minms:text-2xl'>{item.name}</h1>
+          <p>Hello</p>
+            </div>
+      })}
       </main>
       )
 }
