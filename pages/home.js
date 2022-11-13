@@ -41,21 +41,24 @@ const Home = () => {
         id="home"
         className="w-full font-poppins mt-8 flex flex-row minsm:flex-col minsm:space-y-6 justify-center items-center xl:text-6xl"
       >
-        <div className="space-y-5 w-1/3 lg:w-full flex flex-col mt-0 items-center justify-center">
-          <p className="uppercase text-4xl minsm:text-3xl justify-center text-center">
+        <div className="space-y-5 w-1/3 lg:w-1/8 flex flex-col mt-0 items-center justify-center">
+          <p className="uppercase text-6xl minsm:text-3xl sm:text-2xl justify-center text-center">
             Visit us
           </p>
-          <p className="text-lg underline">307 Main St, Williston, ND 58801</p>
+
+          <p className="text-2xl sm:text-lg underline">
+            307 Main St, Williston, ND 58801
+          </p>
           <a href="tel:701-651-4989" className="ml-5 text-lg underline">
             701.609.5198
           </a>
-          <p className="text-lg text-center justify-center items-center">
-            Monday - Friday 
+          <p className="text-xl sm:text-lg text-center justify-center items-center">
+            Monday - Friday
             <br />
-            <span>7AM–5PM</span>
+            <span className="font-semibold text-xl sm:text-lg">7AM–5PM</span>
             <br />
-            Saturday <br/>
-            9AM–4PM
+            Saturday <br />
+           <span className="font-semibold text-xl sm:text-lg">9AM–4PM</span> 
             <br />
             Sunday Closed
             <br />
@@ -77,11 +80,11 @@ const Home = () => {
               duration: 1.5,
             }}
           >
-            <figure className="relative space-y-6 sm:max-w-xs minmd:max-w-sm max-w-xl cursor-pointer">
+            <figure className="relative  space-y-6 sm:max-w-xs minmd:max-w-sm max-w-xl cursor-pointer">
               {homePageInfo?.map((info, index) => (
-                <div key={info.name + index}>
+                <div className="group" key={info.name + index}>
                   <Link href={`/${info.name.toLowerCase()}`}>
-                    <div className="shadow-xl flex-row space-x-5  cursor-pointer opacity-100">
+                    <div className="shadow-xl group-hover:opacity-30 flex-row space-x-5  cursor-pointer opacity-100 sm:pr-3 sm:pl-3">
                       <Image
                         src={`${urlFor(info?.imgurl)}`}
                         width={800}
