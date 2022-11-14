@@ -17,7 +17,7 @@ const Footer = () => {
 
 
   return (
-    <div className="sticky bottom-0 flex p-5 sm:p-2 px-10 items-start justify-between max-w-7xl mx-auto z-10 xl:items-center">
+    <div className="relative bottom-0 mt-2 flex p-5 sm:p-2 px-10 items-start justify-between max-w-7xl mx-auto z-10 xl:items-center">
       <motion.div
         initial={{
           x: -500,
@@ -32,6 +32,7 @@ const Footer = () => {
         transition={{
           duration: 1.5,
         }}
+       
         className="flex flex-row items-center"
       >
       {socials.map((social) => (
@@ -41,22 +42,41 @@ const Footer = () => {
           fgColor="gray"
           bgColor="transparent"
         />
+      
         ))} 
-      <SocialIcon 
+        <motion.div
+         whileHover={{
+          scale: 1.2,
+         }}
+          >
+            <SocialIcon 
       url={`https://facebook.com/dailyaddictionch`}
       fgColor="gray"
       bgColor="transparent"
       />
+          </motion.div>
+          <motion.div
+         whileHover={{
+          scale: 1.2,
+         }}
+          >
       <SocialIcon 
       url={`https://www.instagram.com/dailyaddictioncoffeehouse/`}
       fgColor="gray"
       bgColor="transparent"
       />
+      </motion.div>
+      <motion.div
+         whileHover={{
+          scale: 1.2,
+         }}
+          >
       <SocialIcon 
       url={`https://www.https://www.toasttab.com/daily-addiction-307-main-st/v3.com/daily-addiction-307-main-st/v3.com/dailyaddictioncoffeehouse/`}
       fgColor="gray"
       bgColor="transparent"
       />
+        </motion.div>
       </motion.div>
       {/* <div className="flex flexBetween sm:text-xs sm:mt-3">
         <p className="font-poppins xs:font-sm">
