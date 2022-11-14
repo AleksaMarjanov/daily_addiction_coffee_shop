@@ -84,7 +84,7 @@ const Home = () => {
               {homePageInfo?.map((info, index) => (
                 <div className="group" key={info.name + index}>
                   <Link href={`/${info.name.toLowerCase()}`}>
-                    <div className="shadow-xl group-hover:opacity-30 flex-row space-x-5  cursor-pointer opacity-100 sm:pr-3 sm:pl-3">
+                    <div className="shadow-xl group-hover:opacity-80 flex-row space-x-5  cursor-pointer opacity-100 sm:pr-3 sm:pl-3">
                       <Image
                         src={`${urlFor(info?.imgurl)}`}
                         width={800}
