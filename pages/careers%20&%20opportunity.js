@@ -1,5 +1,6 @@
 import React, {useRef} from "react";
 import { motion } from 'framer-motion'
+import { Router } from "next/router";
 
 const Careers = () => {
  const { form } = useRef()
@@ -28,6 +29,13 @@ const Careers = () => {
             Great People.
           </span>
         </h4>
+        <section className=" flex flex-row items-center justify-center ">
+        <h2 className="text-2xl">
+        <button className="cursor-pointer bg-[#0086bb] hover:bg-[#0086bb]/80
+                py-2 px-5 sm:py-2 sm:px-2 rounded-md text-white font-bold text-lg" onClick={() => router.push('')}>Apply</button> on our website
+        </h2>
+          
+        </section>
 {/* Submit should go to https:// See Text Msg from Kendra */}
       <form
               className="flex flex-col space-y-2 mx-auto"
