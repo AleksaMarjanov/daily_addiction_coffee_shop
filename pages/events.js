@@ -93,12 +93,6 @@ const Events = () => {
                     <p className="mt-3 text-gray-700 line-clamp-3">
                       {event.description}
                     </p>
-                    <button
-                      className="mt-4 inline-block px-4 py-1.5 bg-blue-300 rounded text-blue-900 font-semibold tracking-wide hover:bg-blue-800 hover:text-blue-100"
-                    onClick={() => redirectToDetails()}
-                    >
-                      Read more
-                    </button>
                   </div>
                 </div>
               </div>
