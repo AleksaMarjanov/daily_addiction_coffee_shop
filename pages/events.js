@@ -52,6 +52,11 @@ const Events = () => {
     }
   };
 
+  const redirectToDetails = () => {
+    router.push(`/eventsInfo/${events._id}`);
+  };
+  console.log('get event id:',{events})
+
   return (
     <div className="font-poppins">
       <div className="flex justify-center items-center mx-4 xs:mx-0 sm:mx-4 minlg:mx-8 sm:flex-col sm:items-start">
@@ -90,7 +95,7 @@ const Events = () => {
                     </p>
                     <button
                       className="mt-4 inline-block px-4 py-1.5 bg-blue-300 rounded text-blue-900 font-semibold tracking-wide hover:bg-blue-800 hover:text-blue-100"
-                    onClick={() => router.push(`/eventsInfo/${event._id}`)}
+                    onClick={() => redirectToDetails()}
                     >
                       Read more
                     </button>
