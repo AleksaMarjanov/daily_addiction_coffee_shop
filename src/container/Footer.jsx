@@ -72,7 +72,7 @@ const Footer = () => {
          }}
           >
       <SocialIcon 
-      url={`https://www.https://www.toasttab.com/daily-addiction-307-main-st/v3.com/daily-addiction-307-main-st/v3.com/dailyaddictioncoffeehouse/`}
+      url={`https://www.doordash.com/en-CA/store/daily-addiction-coffee-house-williston-1312569/`}
       fgColor="gray"
       bgColor="transparent"
       />
