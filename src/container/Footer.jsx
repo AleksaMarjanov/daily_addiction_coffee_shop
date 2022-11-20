@@ -78,13 +78,13 @@ const Footer = () => {
       />
         </motion.div>
       </motion.div>
-      {/* <div className="flex flexBetween sm:text-xs sm:mt-3">
+      <div className="flex flexBetween sm:text-xs sm:mt-3">
         <p className="font-poppins xs:font-sm">
-          {new Date().getFullYear()} @Aleksa All Rights Reserved
+          {new Date().getFullYear()} @ All Rights Reserved
         </p>
-      </div> */}
+      </div>
     </div>
   );
-};
+};a
 
 export default Footer;
