@@ -17,7 +17,7 @@ const Footer = () => {
 
 
   return (
-    <div className="relative bottom-0 mt-2 flex p-5 sm:p-2 px-10 items-start justify-between max-w-7xl mx-auto z-10 xl:items-center">
+    <div className="relative bottom-0 mt-2 flex p-5 sm:p-2 px-10 items-start justify-between max-w-7xl mx-auto z-10 md:z-0 xl:items-center">
       <motion.div
         initial={{
           x: -500,
