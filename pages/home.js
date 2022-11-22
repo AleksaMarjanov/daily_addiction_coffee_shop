@@ -39,9 +39,9 @@ const Home = () => {
       </Head>
       <div
         id="home"
-        className="w-full font-poppins mt-8 flex flex-row minsm:flex-col minsm:space-y-6 justify-evenly items-center xl:text-6xl overflow-hidden xl:space-x-6"
+        className="w-full font-poppins mt-8 flex flex-row minsm:flex-col minsm:space-y-6 justify-center items-center xl:text-6xl overflow-hidden"
       >
-        <div className="space-y-5 w-full minsm:w-full flex flex-col mt-0 items-center justify-center">
+        <div className="space-y-5 w-1/3 lg:w-1/8 sm:w-full minsm:w-full flex flex-col mt-0 items-center justify-center">
           <p className="uppercase text-6xl minsm:text-3xl sm:text-2xl justify-center text-center">
             Visit us
           </p>
