@@ -39,14 +39,14 @@ const Navbar = () => {
             }}
             transition={{ duration: 1.2 }}
           >
-          <div className="w-20 h-20 sm:w-14 sm:h-14">
-            <Image
-              src={logo}
-              alt="logo"
-              className="rounded-full "
-              objectFit="cover"
-            />
-          </div>
+            <div className="w-20 h-20 sm:w-14 sm:h-14">
+              <Image
+                src={logo}
+                alt="logo"
+                className="rounded-full "
+                objectFit="cover"
+              />
+            </div>
           </motion.div>
         </a>
         <motion.div
@@ -90,11 +90,15 @@ const Navbar = () => {
                 className="mt-0 cursor-pointer flex flex-col items-center justify-center group font-poppins list-none"
                 key={`link-${item}`}
               >
-                <div className={`md:w-[5px] md:h-[5px] xl:w-[7px] xl:h-[7px] rounded-full mb-[5px] group-hover:bg-secondary-color animate-bounce bg-transparent`}/>
+                <div
+                  className={`md:w-[5px] md:h-[5px] xl:w-[7px] xl:h-[7px] rounded-full mb-[5px] ${navbar ? "group-hover:bg-coffee-yellow" : "group-hover:bg-secondary-color"}   animate-bounce bg-transparent`}
+                />
                 <a
                   href={`${item}`}
                   className={`${
-                    navbar ? "text-white" : "text-gray-800"
+                    navbar
+                      ? "text-white, group-hover:text-coffee-yellow"
+                      : "text-black"
                   } flex flex-col uppercase no-underline font-normal transition-all ease-in-out duration-300 group-hover:text-secondary-color`}
                 >
                   {item}
@@ -103,7 +107,7 @@ const Navbar = () => {
             </motion.div>
           )
         )}
-        <div className="mt-8 ">
+        <div className="mt-8 overflow-hidden">
           <motion.div
             initial={{
               x: 500,
@@ -113,7 +117,7 @@ const Navbar = () => {
               x: 0,
               opacity: 1,
             }}
-            transition={{ duration: 1.2 }}
+            transition={{ duration: 1.1 }}
           >
             <Link href="https://www.toasttab.com/daily-addiction-307-main-st/v3">
               <motion.button
@@ -159,20 +163,25 @@ const Navbar = () => {
                     objectFit="cover"
                   />
                 </a>
-                {["home", "about", "events", "menu", "hours & location", "contact"].map(
-                  (item) => (
-                    <li key={item} className="m-4">
-                      <a
-                        href={`${item}`}
-                        className="text-gray-500 no-underline xl:text-2xl sm:text-xl
+                {[
+                  "home",
+                  "about",
+                  "events",
+                  "menu",
+                  "hours & location",
+                  "contact",
+                ].map((item) => (
+                  <li key={item} className="m-4">
+                    <a
+                      href={`${item}`}
+                      className="text-gray-500 no-underline xl:text-2xl sm:text-xl
                     uppercase font-poppins font-semibold transition-all ease-in-out duration-500 hover:text-secondary-color"
-                        onClick={() => setToggle(false)}
-                      >
-                        {item}
-                      </a>
-                    </li>
-                  )
-                )}
+                      onClick={() => setToggle(false)}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
               </div>
               <div className="mt-10">
                 <Link href="https://www.toasttab.com/daily-addiction-307-main-st/v3">
