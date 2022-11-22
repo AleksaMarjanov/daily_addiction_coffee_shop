@@ -97,7 +97,7 @@ const Navbar = () => {
                   href={`${item}`}
                   className={`${
                     navbar
-                      ? "text-white, group-hover:text-coffee-yellow"
+                      ? " group-hover:text-coffee-yellow"
                       : "text-black"
                   } flex flex-col uppercase no-underline font-normal transition-all ease-in-out duration-300 group-hover:text-secondary-color`}
                 >
