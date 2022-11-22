@@ -48,6 +48,7 @@ const About = () => {
                   whileHover={{
                     scale: 1.1,
                   }}
+                  viewport={{ once: true}}
                 >
                   <Image
                     src={`${urlFor(images?.imgurl)}`}
