@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   const [gallery, setGallery] = useState([]);
+  const directionLeft = true;
 
   useEffect(() => {
     const query = '*[_type == "pictures" ]';
@@ -39,18 +40,11 @@ const About = () => {
               <div className="shadow-xl items-center justify-center flex object-fit object-contain">
                 <motion.div
                   initial={{
-                    x: -500,
-                    opacity: 0,
-                    scale: 0.5,
-                  }}
-                  animate={{
-                    x: 0,
-                    opacity: 1,
-                    scale: 1,
-                  }}
-                  transition={{
-                    duration: 1,
-                  }}
+            x: directionLeft ? -200 : 200,
+            opacity: 0,
+          }}
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1, x: 0}}
                   whileHover={{
                     scale: 1.1,
                   }}

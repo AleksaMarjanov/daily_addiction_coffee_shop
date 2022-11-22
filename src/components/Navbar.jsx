@@ -91,15 +91,19 @@ const Navbar = () => {
                 key={`link-${item}`}
               >
                 <div
-                  className={`md:w-[5px] md:h-[5px] xl:w-[7px] xl:h-[7px] rounded-full mb-[5px] ${navbar ? "group-hover:bg-coffee-yellow" : "group-hover:bg-secondary-color"}   animate-bounce bg-transparent`}
+                  className={`md:w-[5px] md:h-[5px] xl:w-[7px] xl:h-[7px] rounded-full mb-[5px] ${
+                    navbar
+                      ? "group-hover:bg-coffee-yellow"
+                      : "group-hover:bg-secondary-color"
+                  }   animate-bounce bg-transparent`}
                 />
                 <a
                   href={`${item}`}
                   className={`${
                     navbar
-                      ? " group-hover:text-coffee-yellow"
-                      : "text-black"
-                  } flex flex-col uppercase no-underline font-normal transition-all ease-in-out duration-300 group-hover:text-secondary-color`}
+                      ? "text-white group-hover:text-coffee-yellow"
+                      : "text-black group-hover:text-secondary-color"
+                  } flex flex-col uppercase no-underline font-normal transition-all ease-in-out duration-300 `}
                 >
                   {item}
                 </a>
