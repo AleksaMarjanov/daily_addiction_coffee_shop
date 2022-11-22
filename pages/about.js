@@ -24,14 +24,16 @@ const About = () => {
           <div className="flex text-6xl md:text-4xl sm:text-xl justify-center items-center font-semibold">
             About
           </div>
-          <span className="flex font-semibold items-center justify-center mt-10  sm:text-sm sm:p-1 tracking-[1px]">
-            Locally owned
-            <br />
-            full service specialty coffeehouse
-            <br /> in the heart of Downtown Williston, ND.
-          </span>
+          <p className="flex font-semibold lg:text-xl items-center justify-center mt-10  sm:text-sm sm:p-2 minsm:pl-5">
+            Daily Addiction is a unique full
+            full service specialty coffee house<br/>
+            focusing on a variety of quality hand crafted hot and iced drinks along<br/>
+            with savory food choices while offering a cozy and comfortable atmosphere. <br/>
+            Daily Addiction is locally owned by opportunity foundation,<br/> a non profit corporation which
+            provides individualized support and <br/>services for people with intellectual and developmental disabilities.
+          </p>
         </section>
-        <figure className="mt-5 grid gap-6 grid-rows-3 grid-flow-col lg:grid-rows-4 sm:flex sm:flex-col max-w-6xl sm:max-w-lg minmd:grid-rows-4 minmd:max-w-4xl cursor-pointer sm:p-3">
+        <figure className="mt-5 grid gap-6 grid-rows-3 grid-flow-col lg:grid-rows-4 sm:flex sm:flex-col max-w-6xl minsm:grid-rows-6 minsm:p-3 sm:max-w-lg minmd:grid-rows-4 minmd:max-w-4xl cursor-pointer sm:p-3">
           {gallery?.map((images, index) => (
             <div key={images.name + index}>
               <div className="shadow-xl items-center justify-center flex object-fit object-contain">
