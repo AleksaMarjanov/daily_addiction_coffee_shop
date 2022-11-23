@@ -30,19 +30,17 @@ const Careers = () => {
             Great People.
           </span>
         </h4>
-        <section className=" flex flex-row md:pr-5 md:pl-5 items-center justify-center ">
-          <h2 className="text-2xl">
+        <section className="flex gap-2 items-center justify-center">
             <button
-              className="cursor-pointer items-center justify-center bg-[#0086bb] hover:bg-[#0086bb]/80
+              className="cursor-pointer flex items-center justify-center bg-[#0086bb] hover:bg-[#0086bb]/80
                 py-2 px-5 sm:py-2 sm:px-2 rounded-md text-white font-bold text-sm"
               onClick={() =>
                 router.push("https://www.oppfound.org/EmpApplication1")
               }
             >
               Apply
-            </button>{" "}
-            On Official Opportunity Foundation Website
-          </h2>
+            </button>{" "} 
+            <h2 className="sm:text-xl text-3xl xl:p-3 minsm:p-1 sm:p-0">On Official Opportunity<br/> Foundation Website</h2> 
         </section>
         {/* Submit should go to https:// See Text Msg from Kendra */}
         <form
