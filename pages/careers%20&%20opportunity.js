@@ -40,7 +40,7 @@ const Careers = () => {
             >
               Apply
             </button>{" "} 
-            <h2 className="sm:text-xl text-3xl xl:p-3 minsm:p-1 sm:p-0">On Official Opportunity<br/> Foundation Website</h2> 
+            <h2 className="sm:text-xl text-2xl xl:p-3 minsm:p-1 sm:p-0">On Official Opportunity<br/> Foundation Website</h2> 
         </section>
         {/* Submit should go to https:// See Text Msg from Kendra */}
         <form
