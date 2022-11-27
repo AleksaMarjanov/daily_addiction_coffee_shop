@@ -1,11 +1,19 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import emailjs from "@emailjs/browser";
 
 const Careers = () => {
-  const { form } = useRef();
+  const form  = useRef();
   const router = useRouter();
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    desiredPosition: "",
+    coverletter: "",
+    phone: "",
+  })
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -14,8 +22,8 @@ const Careers = () => {
     emailjs
       .sendForm(
         process.env.emailJs_service,
-        process.env.emailJs_tempalte,
-        e.target,
+        process.env.emailJs_template,
+        form.current,
         process.env.emailJs_API
       )
       .then(
@@ -30,6 +38,11 @@ const Careers = () => {
       );
     // }
   };
+
+  const handleInputChange = (e) => {
+    const {name, value} = e.target;
+    setFormData({ ...formData, [name] : value})
+  }
 
   return (
     <main className="flex flex-col justify-center items-center">
@@ -67,38 +80,52 @@ const Careers = () => {
             </button>{" "} 
             <h2 className="sm:text-xl text-2xl xl:p-3 minsm:p-1 sm:p-0">On Official Opportunity<br/> Foundation Website</h2> 
         </section>
-        {/* Submit should go to https:// See Text Msg from Kendra */}
         <form
           className="flex flex-col space-y-2 mx-auto"
-          onSubmit={() => sendEmail()}
+          onSubmit={sendEmail}
           ref={form}
         >
           <div className="flex sm:flex-col space-x-2 sm:space-x-0">
             <input
               type="text"
+              name="name"
               className="contactInput"
               placeholder="Full Name"
+              onChange={handleInputChange}
               required
             />
             <input
               type="email"
+              name="email"
               className="contactInput"
               placeholder="Email"
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              type="phone"
+              name="phone"
+              className="contactInput"
+              placeholder="303-2251-609"
+              onChange={handleInputChange}
               required
             />
           </div>
 
           <input
             placeholder="Desired Position"
+            name="desiredPosition"
             type="text"
             className="contactInput"
+            onChange={handleInputChange}
             required
           />
 
           <textarea
             placeholder="Cover Letter"
-            name=""
+            name="coverletter"
             className="contactInput"
+            onChange={handleInputChange}
             required
           />
           <button

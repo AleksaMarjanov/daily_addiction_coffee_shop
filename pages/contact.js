@@ -6,7 +6,13 @@ import { motion } from "framer-motion";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
 const Contact = () => {
-  const { form } = useRef();
+  const form = useRef();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  })
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   const sendEmail = (e) => {
@@ -16,8 +22,8 @@ const Contact = () => {
     emailjs
       .sendForm(
         process.env.emailJs_service,
-        process.env.emailJs_tempalte,
-        e.target,
+        process.env.emailJs_template,
+        form.current,
         process.env.emailJs_API
       )
       .then(
@@ -32,6 +38,11 @@ const Contact = () => {
       );
     // }
   };
+
+  const handleInputChange = (e) => {
+    const {name, value} = e.target;
+    setFormData({ ...formData, [name] : value})
+  }
 
   return (
     <div className="font-poppins flex flex-col justify-center items-center">
@@ -74,35 +85,41 @@ const Contact = () => {
           {!isFormSubmitted ? (
             <form
               className="flex flex-col space-y-2 mx-auto"
-              onSubmit={() => sendEmail()}
+              onSubmit={sendEmail}
               ref={form}
             >
               <div className="flex sm:flex-col space-x-2 sm:space-x-0">
                 <input
                   type="text"
+                  name="name"
                   className="contactInput"
-                  placeholder="Name"
+                  placeholder="Full Name"
+                  onChange={handleInputChange}
                   required
                 />
                 <input
                   type="email"
+                  name="email"
                   className="contactInput"
                   placeholder="Email"
+                  onChange={handleInputChange}
                   required
                 />
               </div>
 
               <input
                 placeholder="Subject"
+                name="subject"
                 type="text"
                 className="contactInput"
+                onChange={handleInputChange}
                 required
               />
-
               <textarea
                 placeholder="Message"
-                name=""
+                name="message"
                 className="contactInput"
+                onChange={handleInputChange}
                 required
               />
               <button
@@ -116,7 +133,9 @@ const Contact = () => {
           ) : (
             <div className="flex flex-col items-center justify-center">
               <h2 className="font-poppins text-2xl">
-                Thank you for getting in touch with us!
+                Thank you for getting in touch with us!<br/>
+                Someone will be reaching out to you<br/>as soon as possible from our team<br/>
+                {window.location.reload(false)}
               </h2>
             </div>
           )}
