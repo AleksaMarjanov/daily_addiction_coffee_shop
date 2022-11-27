@@ -29,6 +29,7 @@ const Contact = () => {
       .then(
         () => {
           setIsFormSubmitted(true);
+          
           window.location.reload(false);
         },
         () => {
@@ -134,7 +135,6 @@ const Contact = () => {
               <h2 className="font-poppins text-2xl">
                 Thank you for getting in touch with us!<br/>
                 Someone will be reaching out to you<br/>as soon as possible from our team<br/>
-                {window.location.reload(false)}
               </h2>
             </div>
           )}
