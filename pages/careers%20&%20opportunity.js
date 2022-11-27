@@ -29,7 +29,7 @@ const Careers = () => {
       .then(
         () => {
           setIsFormSubmitted(true);
-          window.location.reload(false);
+          // window.location.reload(false);
         },
         () => {
           alert("Failed to send the message, please try again");
@@ -139,8 +139,8 @@ const Careers = () => {
         </form>
         ) : (
             <div className="flex flex-col items-center justify-center">
-              <h2 className="font-poppins text-2xl">
-                Thank you for getting in touch with us!<br/>
+              <h2 className="font-poppins text-2xl minsm:text-lg minsm:p-3 h-screen">
+                Thank you for taking interest in our company!<br/>
                 Someone will be reaching out to you<br/>as soon as possible from our team<br/>
               </h2>
             </div>

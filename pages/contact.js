@@ -29,8 +29,6 @@ const Contact = () => {
       .then(
         () => {
           setIsFormSubmitted(true);
-          
-          window.location.reload(false);
         },
         () => {
           alert("Failed to send the message, please try again");
@@ -132,7 +130,7 @@ const Contact = () => {
             </form>
           ) : (
             <div className="flex flex-col items-center justify-center">
-              <h2 className="font-poppins text-2xl">
+              <h2 className="font-poppins text-2xl minsm:text-lg minsm:p-3 h-screen">
                 Thank you for getting in touch with us!<br/>
                 Someone will be reaching out to you<br/>as soon as possible from our team<br/>
               </h2>
