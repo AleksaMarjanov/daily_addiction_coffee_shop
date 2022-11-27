@@ -1,10 +1,35 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import emailjs from "@emailjs/browser";
 
 const Careers = () => {
   const { form } = useRef();
   const router = useRouter();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // if (recaptchaLoad && isVerified) {
+    emailjs
+      .sendForm(
+        process.env.emailJs_service,
+        process.env.emailJs_tempalte,
+        e.target,
+        process.env.emailJs_API
+      )
+      .then(
+        () => {
+          alert("Message successfully sent!");
+          setIsFormSubmitted(true);
+          window.location.reload(false);
+        },
+        () => {
+          alert("Failed to send the message, please try again");
+        }
+      );
+    // }
+  };
 
   return (
     <main className="flex flex-col justify-center items-center">
