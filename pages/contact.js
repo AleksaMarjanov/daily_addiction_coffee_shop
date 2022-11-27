@@ -22,13 +22,12 @@ const Contact = () => {
     emailjs
       .sendForm(
         process.env.emailJs_service,
-        process.env.emailJs_template,
+        process.env.emailJs_template_contact,
         form.current,
         process.env.emailJs_API
       )
       .then(
         () => {
-          alert("Message successfully sent!");
           setIsFormSubmitted(true);
           window.location.reload(false);
         },

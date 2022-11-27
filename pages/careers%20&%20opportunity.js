@@ -22,7 +22,7 @@ const Careers = () => {
     emailjs
       .sendForm(
         process.env.emailJs_service,
-        process.env.emailJs_template,
+        process.env.emailJs_template_careers,
         form.current,
         process.env.emailJs_API
       )

@@ -20,7 +20,8 @@ const nextConfig = {
     projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
     sanity_token: process.env.REACT_APP_SANITY_TOKEN,
     emailJs_service: process.env.REACT_APP_EMAILJS_SERVICE,
-    emailJs_template: process.env.REACT_APP_EMAILJS_TEMPLATE,
+    emailJs_template_careers: process.env.REACT_APP_EMAILJS_TEMPLATE,
+    emailJs_template_contact: process.env.REACT_APP_EMAILJS_TEMPLATE_CONTACT,
     emailJs_API: process.env.REACT_APP_EMAILJS_API_KEY,
     recaptcha: process.env.REACT_APP_RECAPTCHA_SITE_KEY,
 
@@ -29,8 +30,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/',
-        destination: '/home',
+        source: '/home',
+        destination: '/',
         permanent: true,
       },
     ]
