@@ -28,7 +28,6 @@ const Careers = () => {
       )
       .then(
         () => {
-          alert("Message successfully sent!");
           setIsFormSubmitted(true);
           window.location.reload(false);
         },
@@ -80,6 +79,8 @@ const Careers = () => {
             </button>{" "} 
             <h2 className="sm:text-xl text-2xl xl:p-3 minsm:p-1 sm:p-0">On Official Opportunity<br/> Foundation Website</h2> 
         </section>
+        {!isFormSubmitted ? (
+
         <form
           className="flex flex-col space-y-2 mx-auto"
           onSubmit={sendEmail}
@@ -136,6 +137,15 @@ const Careers = () => {
             Submit
           </button>
         </form>
+        ) : (
+            <div className="flex flex-col items-center justify-center">
+              <h2 className="font-poppins text-2xl">
+                Thank you for getting in touch with us!<br/>
+                Someone will be reaching out to you<br/>as soon as possible from our team<br/>
+                {window.location.reload(false)}
+              </h2>
+            </div>
+          )}
       </div>
     </main>
   );
