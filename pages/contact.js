@@ -18,7 +18,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // if (recaptchaLoad && isVerified) {
+
     emailjs
       .sendForm(
         process.env.emailJs_service,
@@ -28,13 +28,13 @@ const Contact = () => {
       )
       .then(
         () => {
+          alert("Successfully sent message! :)");
           setIsFormSubmitted(true);
         },
         () => {
           alert("Failed to send the message, please try again");
         }
       );
-    // }
   };
 
   const handleInputChange = (e) => {
