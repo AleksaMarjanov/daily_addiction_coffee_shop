@@ -26,7 +26,7 @@ const About = () => {
             About
           </div>
           <p className="flex font-semibold lg:text-xl items-center justify-center mt-10  sm:text-sm sm:p-2 minsm:pl-5">
-            Daily Addiction is a unique full
+            Daily Addiction is a unique
             full service specialty coffee house<br/>
             focusing on a variety of quality hand crafted hot and iced drinks along<br/>
             with savory food choices while offering a cozy and comfortable atmosphere. <br/>
