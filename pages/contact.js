@@ -18,7 +18,6 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-
     emailjs
       .sendForm(
         process.env.emailJs_service,
@@ -28,7 +27,7 @@ const Contact = () => {
       )
       .then(
         () => {
-          alert("Successfully sent message! :)");
+          alert("Message sent successfully! :)")
           setIsFormSubmitted(true);
         },
         () => {

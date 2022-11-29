@@ -5,6 +5,7 @@ import Footer from "../src/container/Footer";
 import Banner from "../src/container/Banner";
 import Head from "next/head";
 import Script from "next/script";
+import  emailjs  from '@emailjs/browser';
 
 function MyApp({ Component, pageProps }) {
   const [isSSR, setIsSSR] = useState(true);
@@ -25,9 +26,7 @@ function MyApp({ Component, pageProps }) {
         <Footer />
         <Script>
           <script
-            src="https://www.google.com/recaptcha/api.js?&render=explicit"
-            async
-            defer
+            src="https://www.google.com/recaptcha/api.js" async defer
           ></script>
         </Script>
       </div>
