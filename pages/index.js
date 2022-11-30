@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import AppWrap from "../src/wrapper/AppWrap";
 import MotionWrap from "../src/wrapper/MotionWrap";
 import Image from "next/image";
-import SEO from "@bradgarropy/next-seo";
-import Head from "next/head";
 import { motion } from "framer-motion";
 
 import { client, urlFor } from "../src/client";
@@ -22,20 +20,6 @@ const Home = () => {
 
   return (
     <>
-      <Head>
-        <SEO
-          title="Daily Addiction Coffe House"
-          description="Enjoy the best coffee in Williston"
-          keywords={[
-            "best coffe shop in williston",
-            "coffee",
-            "breakfast",
-            "espresso",
-            "latte",
-            "cappuccino",
-          ]}
-        />
-      </Head>
       <div
         id="home"
         className="w-full font-poppins mt-8 flex flex-row minsm:flex-col minsm:space-y-6 justify-center items-center xl:text-6xl overflow-hidden"

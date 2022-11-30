@@ -4,8 +4,8 @@ import Navbar from "../src/components/Navbar";
 import Footer from "../src/container/Footer";
 import Banner from "../src/container/Banner";
 import Head from "next/head";
+import SEO from "@bradgarropy/next-seo";
 import Script from "next/script";
-import  emailjs  from '@emailjs/browser';
 
 function MyApp({ Component, pageProps }) {
   const [isSSR, setIsSSR] = useState(true);
@@ -18,17 +18,33 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Head></Head>
+       <Head>
+        <SEO
+          title="Daily Addiction Coffe House"
+          description="Enjoy the best coffee in Williston"
+          keywords={[
+            "best coffee shop in Williston",
+            "coffee",
+            "breakfast",
+            "espresso",
+            "latte",
+            "Williston, North Dakota",
+            "cappuccino",
+            "shop",
+            "58801"
+          ]}
+        />
+      </Head>
       <div className="">
         <Navbar />
         <Banner />
         <Component {...pageProps} />
         <Footer />
-        <Script>
+        {/* <Script>
           <script
             src="https://www.google.com/recaptcha/api.js" async defer
           ></script>
-        </Script>
+        </Script> */}
       </div>
     </>
   );

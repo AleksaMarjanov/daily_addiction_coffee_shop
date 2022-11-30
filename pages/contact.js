@@ -7,12 +7,6 @@ import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
 const Contact = () => {
   const form = useRef();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   const sendEmail = (e) => {
@@ -27,7 +21,6 @@ const Contact = () => {
       )
       .then(
         () => {
-          alert("Message sent successfully! :)")
           setIsFormSubmitted(true);
         },
         () => {
@@ -35,11 +28,6 @@ const Contact = () => {
         }
       );
   };
-
-  const handleInputChange = (e) => {
-    const {name, value} = e.target;
-    setFormData({ ...formData, [name] : value})
-  }
 
   return (
     <div className="font-poppins flex flex-col justify-center items-center">
@@ -91,7 +79,6 @@ const Contact = () => {
                   name="name"
                   className="contactInput"
                   placeholder="Full Name"
-                  onChange={handleInputChange}
                   required
                 />
                 <input
@@ -99,7 +86,6 @@ const Contact = () => {
                   name="email"
                   className="contactInput"
                   placeholder="Email"
-                  onChange={handleInputChange}
                   required
                 />
               </div>
@@ -109,21 +95,20 @@ const Contact = () => {
                 name="subject"
                 type="text"
                 className="contactInput"
-                onChange={handleInputChange}
                 required
               />
               <textarea
                 placeholder="Message"
                 name="message"
                 className="contactInput"
-                onChange={handleInputChange}
                 required
               />
               <button
                 type="submit"
                 className="cursor-pointer bg-[#0086bb] 
                 py-5 px-10 sm:py-2 sm:px-5 rounded-md text-white font-bold text-lg"
-              >
+                
+                >
                 Submit
               </button>
             </form>

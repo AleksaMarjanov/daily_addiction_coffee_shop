@@ -7,18 +7,10 @@ const Careers = () => {
   const form  = useRef();
   const router = useRouter();
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    desiredPosition: "",
-    coverletter: "",
-    phone: "",
-  })
-
+  
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // if (recaptchaLoad && isVerified) {
     emailjs
       .sendForm(
         process.env.emailJs_service,
@@ -29,7 +21,6 @@ const Careers = () => {
       .then(
         () => {
           setIsFormSubmitted(true);
-          // window.location.reload(false);
         },
         () => {
           alert("Failed to send the message, please try again");
@@ -38,10 +29,6 @@ const Careers = () => {
     // }
   };
 
-  const handleInputChange = (e) => {
-    const {name, value} = e.target;
-    setFormData({ ...formData, [name] : value})
-  }
 
   return (
     <main className="flex flex-col justify-center items-center">
@@ -92,7 +79,6 @@ const Careers = () => {
               name="name"
               className="contactInput"
               placeholder="Full Name"
-              onChange={handleInputChange}
               required
             />
             <input
@@ -100,7 +86,6 @@ const Careers = () => {
               name="email"
               className="contactInput"
               placeholder="Email"
-              onChange={handleInputChange}
               required
             />
             <input
@@ -108,7 +93,6 @@ const Careers = () => {
               name="phone"
               className="contactInput"
               placeholder="303-2251-609"
-              onChange={handleInputChange}
               required
             />
           </div>
@@ -118,15 +102,13 @@ const Careers = () => {
             name="desiredPosition"
             type="text"
             className="contactInput"
-            onChange={handleInputChange}
             required
           />
 
           <textarea
-            placeholder="Cover Letter"
+            placeholder="Tell us a little bit about yourself..."
             name="coverletter"
             className="contactInput"
-            onChange={handleInputChange}
             required
           />
           <button
