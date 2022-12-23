@@ -80,8 +80,9 @@ const Footer = () => {
       </motion.div>
       <div className="flex flexBetween sm:text-xs sm:mt-3">
         <p className="font-poppins xs:font-sm">
-          {new Date().getFullYear()} @ Copyright <span className="decoration-[#0086bb]/50">Daily Addiction </span>| All Rights Reserved | 
-          <a className="decoration-[#0086bb]/50" href="https://aleksamarjanov.com/"> Developed by Marjanov Design Solutions</a>
+          {new Date().getFullYear()} @ Copyright <span className="text-[#0086bb]">Daily Addiction </span>| All Rights Reserved | 
+          <a  href="https://aleksamarjanov.com/"> 
+          <span className="text-[#0086bb]"> Developed by Marjanov Design Solutions</span></a>
          
         </p>
       </div>
