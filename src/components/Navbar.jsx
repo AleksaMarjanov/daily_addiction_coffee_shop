@@ -61,7 +61,7 @@ const Navbar = () => {
           transition={{ duration: 1.2 }}
         >
           <a
-            href="tel:701-651-4989"
+            href="tel:701-609-5198"
             className={`${
               navbar ? "text-white" : "text-gray-800"
             } font-poppins ml-5 text-xs md:hidden`}
