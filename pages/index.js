@@ -32,7 +32,7 @@ const Home = () => {
           <p className="text-2xl sm:text-lg underline">
             307 Main St, Williston, ND 58801
           </p>
-          <a href="tel:701-651-4989" className="ml-5 text-lg underline">
+          <a href="tel:701-609-5198" className="ml-5 text-lg underline">
             701.609.5198
           </a>
           <p className="text-xl sm:text-lg text-center justify-center items-center">
