@@ -18,20 +18,23 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-       <Head>
+      <Head>
         <SEO
           title="Daily Addiction Coffe House, Best Coffee made by Experts"
           description="Welcome to Daily Addiction Coffee House, the best coffee shop in Williston. We offer a wide selection of specialty coffee drinks, pastries, and sandwiches made with locally sourced ingredients. Come visit us and experience the warm, inviting atmosphere of our coffee shop. We can't wait to serve you!"
           keywords={[
-            "best coffee shop in Williston",
             "coffee",
-            "breakfast",
-            "espresso",
-            "latte",
-            "Williston, North Dakota",
+            "coffee house",
+            "daily addiction",
+            "handcrafted coffee",
+            "pastries",
+            "friendly service",
+            "coffee shop",
+            "Williston",
+            "North Dakota",
             "cappuccino",
             "shop",
-            "58801"
+            "58801",
           ]}
         />
       </Head>
